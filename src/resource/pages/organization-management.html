@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if gte IE 9 ]>    <html class="ie"> <![endif]-->
+<!--[if !(IE)]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>电子政务</title>
+        <meta name="description" content="电子政务"/>
+        <meta name="keywords" content="电子政务"/>
+        <!--[if IE]>
+            <script src="../scripts/base/html5-reset.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="../styles/global/merge.css"/>
+        <link rel="stylesheet" type="text/css" href="../styles/page/system-management.css"/>
+    </head>
+    <body class="page-organization-management">
+    	<header id="header">
+    		<!-- 页头 -->
+    	</header>
+    	<div id="content" class="layout">
+        		<aside class="mod-tool-bar layout-toolbar">
+                    <header><h2 class="title">系统管理</h2></header>
+                    <ul class="content">
+                        <li><a class="organization-management-btn" href="organization-management.html" title="组织管理"></a></li>
+                        <li><a class="user-management-btn" href="membership-management.html" title="用户管理"></a></li>
+                        <li><a class="batch-processing-btn" href="batch-processing.html" title="批量设置"></a></li>
+                    </ul>
+                    <footer>工作台</footer>
+                </aside>
+                <div class="layout-file-list">
+                    <header class="clearfix">
+                        <div class="operate-area">
+                            <a id="addOrganizationBtn" title="新增" class="icon add-btn" href="#"></a>
+                            <a title="删除" disabled="disabled" class="icon delete-btn" href="#"></a>
+                            <a title="上移" disabled="disabled" class="icon up-btn" href="#"></a>
+                            <a title="下移" disabled="disabled" class="icon down-btn" data-tip-content-id="sortBox" href="#"></a>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div id="organizationTreeContainer" class="e-tree organization-tree"></div>
+                    </div>
+                </div>
+                <article class="layout-file-content">
+                    <header>
+                    </header>
+                    <div class="content">
+                        <form action="#" method="post">
+                        <input type="hidden" id="organizationId"/>
+                        <div class="detail-info cell-organization-detail">
+                            <div class="cell-header">
+                                <h2 class="title">组织详情</h2>
+                            </div>
+                            <div class="cell-content">
+                                <ul class="form-list">
+                                    <li>
+                                        <label class="label-describe">单位名称：</label>
+                                        <input id="organizationName" type="text" class="input-box"/>
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">单位地址：</label>
+                                        <input id="organizationAddress" type="text" class="input-box"/>
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">电话号码：</label>
+                                        <input id="organizationPhoneNumber" type="text" class="input-box"/>
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">密码：</label>
+                                        <input id="organizationPassword" type="text" class="input-box"/>
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">单位简介：</label>
+                                        <textarea id="organizationAbstract" class="textarea-box"></textarea>
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">单位权限：</label>
+                                        <span class="radio-box">
+                                            <label class="radio"><input type="radio" name="authority" autocomplete="off" checked="checked"/>普通用户</label>
+                                            <label class="radio"><input type="radio" name="authority" autocomplete="off"/>领导</label>
+                                        </span>
+                                        <button id="customBtn" class="btn" type="button">自定义</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cell-footer">
+                                <button class="btn" type="submit">保存</button>
+                                <button class="btn reset-btn" type="reset">重置</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </article>
+    	</div>
+    	<footer id="footer">
+    		<!-- 页尾 -->
+    	</footer>
+        <article id="customAuthorityDialog" class="dialog mod-custom-authority-dialog">
+            <header>
+                <h1 class="title">对话框</h1>
+                <a href="#" title="关闭" class="dialog-close-btn"></a>
+            </header>
+            <div class="content">
+                <dl class="clear-float">
+                    <dt>角色名称：</dt>
+                    <dd>
+                        <input type="text" class="input-box"/>
+                    </dd>
+                    <dt>公文管理：</dt>
+                    <dd>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                    </dd>
+                    <dt>发布信息：</dt>
+                    <dd>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                    </dd>
+                    <dt>个人工作台：</dt>
+                    <dd>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                        <label class="checkbox"><input type="checkbox"/>权限1</label>
+                    </dd>
+                </dl>
+                <div class="operate-area">
+                    <button class="btn" type="submit">保存</button>
+                    <button class="btn dialog-cancel-btn" type="button">取消</button>
+                </div>
+            </div>
+        </article>
+        <script type="text/javascript" src="../scripts/global/merge.js"></script>
+        <script type="text/javascript" src="../scripts/page/organization-management.js"></script>
+    </body>
+</html>

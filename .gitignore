@@ -11,4 +11,8 @@ pids
 logs
 results
 
+src/node_modules
 npm-debug.log
+.DS_Store
+
+src/resource/js/base/Energon

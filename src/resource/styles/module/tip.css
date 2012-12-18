@@ -1,0 +1,47 @@
+/**
+ * tip提示框
+ * @author : panda;
+ * @createTime : 2012-11-29;
+ */
+.tip-container{
+	padding-top: 5px;
+}
+.tip-container .tip-tail{
+	position: absolute;
+	top: -5px;
+	left: 13px;
+	height: 5px;
+	width: 10px;
+	background: url("../../images/government-bg.png") 0 0 no-repeat;
+}
+.tip-container.towards-the-right .tip-tail{
+	right: 13px;
+	left: auto;
+}
+.tip-container .tip-content{
+	position: relative;
+	border: 1px solid #459af7;
+	border-radius: 2px;
+	box-shadow:2px 2px 6px #666;
+	background-color: #FFF;
+	min-width: 78px;
+}
+.tip-list{
+	line-height: 30px;
+	color: #3d3d3d;
+	font-family: "\5FAE\8F6F\96C5\9ED1", /* 微软雅黑，默认特殊标题字体 */
+                "\9ED1\4F53", /* 黑体，win下替换字体 */
+                "\6587\6CC9\9A7F\6B63\9ED1\4F53", /* 文泉驿正黑体，unix/linux下替换字体 */
+                "\534E\6587\7EC6\9ED1"; /* 华文细黑，mac os下替换字体 */
+}
+.tip-list li{
+	padding: 0 11px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+.tip-list li:last-child{
+	border-bottom: 0 none;
+}
+.tip-list li:hover{
+	color: #459af7;
+}

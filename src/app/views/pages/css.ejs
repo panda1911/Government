@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="gbk"/>
+        <title>淘数据前端知识中心</title>
+        <meta name="description" content="淘数据前端知识中心"/>
+        <meta name="keywords" content="淘数据,前端,知识库"/>
+        <link rel="stylesheet" href="/css/global/merge.css"/>
+        <link rel="stylesheet" href="/css/base/sh_emacs.min.css"/>
+    </head>
+    <body class="page-css">
+        <%- partial('modules/nav.ejs') %>
+        <header id="header" class="container">
+            <%- partial('modules/header.ejs') %>
+        </header>
+        <div id="content" class="container">
+              <div class="row">
+                <div class="span3">
+                    <%- partial('modules/sidenavs/css-sidenav.ejs') %>
+                </div>
+                <div class="span9">
+                    <%- partial('modules/css/input.ejs') %>
+                    <%- partial('modules/css/select.ejs') %>
+                    <%- partial('modules/css/button.ejs') %>
+                </div>
+              </div>
+        </div>
+        <footer id="footer" class="container">
+            <%- partial('modules/footer.ejs') %>
+        </footer>
+        <script type="text/javascript" src="/js/lib/Energon/src/core/merge.js"></script>
+        <script type="text/javascript" src="/js/global/merge.js"></script>
+        <script type="text/javascript" src="/js/global/highlight.merge.js"></script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+                sh_highlightDocument();
+            });
+
+        </script>
+    </body>
+</html>

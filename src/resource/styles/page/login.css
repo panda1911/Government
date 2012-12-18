@@ -1,0 +1,144 @@
+/**
+ * 登录页样式
+ * @author : panda
+ * @createTime : 2012-12-05
+ */
+body{
+	background: url("../../images/login-bg.jpg") 0 0 repeat;
+}
+.mod-login-box .input-box{
+	background: url("../../images/icon-bg-new.png") 0 0 no-repeat;
+}
+.mod-login-box .application-tip,
+.mod-login-box .cell-application-tip-content .cell-content li{
+	background: url("../../images/government-bg.png") 0 0 no-repeat;
+}
+.mod-login-box{
+	background: url("../../images/login-bg.png") 0 0 no-repeat;
+	width: 538px;
+	height: 263px;
+	margin: 223px auto 0;
+}
+.mod-login-box .content{
+	padding: 92px 0 0 40px;
+}
+.mod-login-box .item{
+	height: 46px;
+	line-height: 46px;
+	
+}
+.mod-login-box .item .input-box{
+	padding-left: 24px;
+}
+
+.mod-login-box .user-name{
+	width: 387px;
+	background-position: 5px -693px;
+}
+.mod-login-box .password{
+	width: 387px;
+	background-position: 5px -743px;
+}
+.mod-login-box .verification-code-wrap{
+	float: left;
+}
+.mod-login-box .verification-code{
+	
+	margin: 7px 15px 0 0;
+	width: 172px;
+	background-position: 5px -793px;
+	vertical-align: top;
+}
+.mod-login-box .verification-code-box{
+	float: left;
+	display: block;
+	height: 46px;
+	width: 122px;
+	vertical-align: middle;
+}
+.mod-login-box .verification-code-box img{
+	float: left;
+	display: block;
+	width: 62px;
+	height: 34px;
+	margin: 6px 12px 0 0;
+}
+.mod-login-box .verification-code-box a{
+	float: left;
+}
+.mod-login-box .application-tip{
+	background-position: right -95px;
+	padding: 0 14px 0 9px;
+	border-left: 1px solid #3366cc;
+	color: #3366cc;
+	cursor: pointer;
+}
+.mod-login-box .login-btn{
+	position: absolute;
+	top: -121px;
+	left: 437px;
+	display: block;
+	width: 61px;
+	height: 94px;
+	cursor: pointer;
+	border: 0 none;
+	background-color: transparent;
+}
+.mod-login-box .operate-area,
+.mod-login-box .info-area{
+	position: relative;
+}
+.mod-login-box .cell-application-tip-content{
+	position: absolute;
+	top: 30px;
+	right: 71px;
+	width: 440px;
+	display: none;
+}
+.mod-login-box .cell-application-tip-content .tip-content{
+	padding: 10px 20px;
+}
+.mod-login-box .cell-application-tip-content .cell-header{
+	height: 24px;
+	line-height: 24px;
+	
+}
+.mod-login-box .cell-application-tip-content .cell-header .title{
+	font-weight: 700;
+	color: #333;
+}
+.mod-login-box .cell-application-tip-content .cell-content{
+	padding-bottom: 10px;
+	line-height: 22px;
+	color: #333;
+}
+.mod-login-box .cell-application-tip-content .cell-content li{
+	padding-left: 12px;
+	background-position: 5px -139px;
+
+}
+.mod-login-box .cell-application-tip-content .cell-footer{
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid #ccc;
+	color: #666;
+}
+.mod-contact-info{
+	width: 894px;
+	margin: 321px auto 0;
+	border-top: 1px solid #c2c5c8;
+}
+.mod-contact-info header{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.mod-contact-info header a{
+	margin-right: 35px;
+}
+.mod-contact-info .content{
+	height: 40px;
+	line-height: 20px;
+	color: #3d3d3d;
+	text-align: center;
+}

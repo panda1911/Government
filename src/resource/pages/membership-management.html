@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if gte IE 9 ]>    <html class="ie"> <![endif]-->
+<!--[if !(IE)]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>电子政务</title>
+        <meta name="description" content="电子政务"/>
+        <meta name="keywords" content="电子政务"/>
+        <!--[if IE]>
+            <script src="../scripts/base/html5-reset.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="../styles/global/merge.css"/>
+        <link rel="stylesheet" type="text/css" href="../styles/page/system-management.css"/>
+    </head>
+    <body class="page-user-management">
+    	<header id="header">
+    		<!-- 页头 -->
+    	</header>
+    	<div id="content" class="layout">
+        		<aside class="mod-tool-bar layout-toolbar">
+                    <header><h2 class="title">系统管理</h2></header>
+                    <ul class="content">
+                        <li><a class="organization-management-btn" href="organization-management.html" title="组织管理"></a></li>
+                        <li><a class="user-management-btn" href="membership-management.html" title="用户管理"></a></li>
+                        <li><a class="batch-processing-btn" href="batch-processing.html" title="批量设置"></a></li>
+                    </ul>
+                    <footer>工作台</footer>
+                </aside>
+                <div class="layout-file-list">
+                    <header class="clearfix">
+                        <div class="operate-area">
+                            <a title="新增" class="icon add-btn" href="#"></a>
+                            <a title="全选" class="icon all-select-btn" href="#"></a>
+                            <a title="删除" class="icon delete-btn" href="#"></a>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="membership-credentials-box">
+                            <h3 class="organization-title">所在部门：</h3>
+                            <div class="organization-content">
+                                <input id="selectedOrganization" type="text" class="input-box" readonly="readonly"/>
+                                <div id="organizationBox" class="organization-tree-container e-tree">
+                                    
+                                </div>
+                            </div>
+                            <h3 class="membership-title">部门成员：</h3>
+                            <div id="memberBox" class="membership-content clear-float">
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="layout-file-content">
+                    <header>
+                    </header>
+                    <div class="content">
+                        <div class="detail-info cell-membership-detail">
+                            <div class="cell-header">
+                                <h2 class="title">成员详情</h2>
+                            </div>
+                            <div class="cell-content no-membership-info">
+                                <ul class="form-list">
+                                    <li>
+                                        <label class="label-describe">用户名：</label>
+                                        张三
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">真实姓名：</label>
+                                        李四
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">所在部门：</label>
+                                        集团战略决策部
+                                    </li>
+                                    <li>
+                                        <label class="label-describe">密码：</label>
+                                        SAF23K3J4564
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cell-footer">
+                                <button class="btn" type="button">保存</button>
+                                <button class="btn reset-btn" type="button">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+    	</div>
+    	<footer id="footer">
+    		<!-- 页尾 -->
+    	</footer>
+        <script type="text/javascript" src="../scripts/global/merge.js"></script>
+        <script type="text/javascript" src="../scripts/page/membership-management.js"></script>
+    </body>
+</html>

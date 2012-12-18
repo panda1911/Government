@@ -1,0 +1,129 @@
+/**
+ * 结构树样式
+ * @author : panda;
+ * @createTime : 2012-10-16;
+ */
+.e-tree i,
+.e-tree div>em{
+	background: url("../../images/tree-bg.png") 0 0 no-repeat;
+}
+.e-tree .e-tree-loading>div>a .e-tree-node-icon{
+	background: url("../../images/tree-loading.gif") 0 0 no-repeat;
+}
+.e-tree{
+	line-height: 24px;
+	overflow : auto;
+}
+.e-tree i{
+	display: inline-block;
+	vertical-align: middle;
+}
+.e-tree a{
+	display: inline-block;
+	vertical-align: middle;
+	height: 24px;
+	word-wrap: break-word; 
+	word-break: normal; 
+}
+.e-tree a:link,
+.e-tree a:visited{
+	text-decoration: none;
+	color: #333;
+}
+.e-tree div>em{
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	margin-top: 3px;
+	background-position: -1px -19px;
+	cursor: pointer;
+	visibility: hidden;
+}
+.e-tree div>em:hover{
+	background-position: -1px -37px;
+}
+.e-tree div>.e-tree-checkbox-show{
+	visibility: visible;
+}
+.e-tree div>.e-tree-half-checked{
+	background-position: -19px -19px;
+}
+.e-tree div>.e-tree-half-checked:hover{
+	background-position: -19px -37px;
+}
+.e-tree div>.e-tree-checked{
+	background-position: -37px -19px;
+}
+.e-tree div>.e-tree-checked:hover{
+	background-position: -37px -37px;
+}
+.e-tree div{
+	display: block;
+	*zoom: 1;
+}
+.e-tree div:after{
+	display: block;
+	clear: both;
+	height: 0;
+	content: "\0020";
+}
+.e-tree .e-tree-structure-icon{
+	width: 18px;
+	height: 24px;
+	background: url("../../images/icon-bg-new.png") -50px -1043px no-repeat;
+}
+.e-tree .e-tree-node-icon{
+	margin: 0 5px 0 0;
+	width: 16px;
+	height: 16px;
+	background-position: -56px -19px;
+}
+.e-tree> ul > li{
+	margin-left: 0;
+}
+.e-tree li{
+	margin-left: 18px;
+	/*background-position: -90px 0;*/
+	height: 24px;
+	white-space: nowrap;
+	/*overflow: hidden;*/
+}
+.e-tree .e-tree-last-child{
+	background: none;
+}
+.e-tree .e-tree-leaf .e-tree-node-icon{
+	background-position: -75px -19px;
+}
+.e-tree .e-tree-leaf>div>.e-tree-structure-icon{
+	/*background-position: -36px 4px;*/
+	background-position: -108px 4px;
+}
+.e-tree .e-tree-open>div>.e-tree-structure-icon{
+	/*background-position: -72px 4px;*/
+	background: url("../../images/icon-bg-new.png") 0 -1043px no-repeat;
+	cursor: pointer;
+}
+.e-tree .e-tree-close>div>.e-tree-structure-icon{
+	cursor: pointer;
+}
+.e-tree .e-tree-close>ul{
+	display:none;
+}
+.e-tree .e-tree-open{
+	height: auto;
+}
+.e-tree .e-tree-comment{
+	display: inline-block;
+	vertical-align: top;
+	height: 24px;
+	padding-left: 5px;
+	color: #ff3334;
+}
+.e-tree .e-tree-current-node>div>a{
+	background-color: #50a0f7;
+	border:1px solid #50a0f7;
+	height:22px;
+	padding:0 2px;
+	color: #FFF;
+}

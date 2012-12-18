@@ -1,0 +1,131 @@
+                  <article id="ui-dialog" class="mod-doc">
+                    <header>
+                        <h1 class="title">ui-dialog:浮出层</h1>
+                    </header>
+                    <div class="content">
+                        <section class="overview">
+                            <h2 class="cell-title">介绍</h2>
+                            <div class="cell-content">
+                                提供模拟对话框、浮出层遮罩功能；多实例化，互不干扰；公用遮罩，屏蔽遮罩层下方Tab事件，遮罩层上方Tab循环
+                            </div>
+                        </section>
+                        <section class="how">
+                            <h2 class="cell-title">如何使用</h2>
+                            <div class="cell-content">
+                                <pre class="sh_javascript">
+$.use('ui-dialog',function(){
+    $('...').dialog(options);
+});</pre>
+                            </div>
+                        </section>
+                        <section class="demo">
+                            <div class="cell-content">
+                                <a class="btn btn-large btn-danger" href="http://wd.alibaba-inc.com/fdevlib/examples/fdev4/jQuery.ui.dialog.html" title="演示demo">demo</a>
+                            </div>
+                        </section>
+                        <section class="config">
+                            <h2 class="cell-title">配置</h2>
+                            <div class="cell-content">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>参数名</th>
+                                            <th>说明</th>
+                                            <th>类型</th>
+                                            <th>default</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><em>fixed</em></td>
+                                            <td>浮出层是否跟随滚动</td>
+                                            <td>Boolean</td>
+                                            <td>false</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>center</em></td>
+                                            <td>浮出层是否打开居中（水平+垂直）</td>
+                                            <td>Boolean</td>
+                                            <td>false</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>draggable</em></td>
+                                            <td>是否支持浮出层可拖动。设为 true 只提供默认的拖动效果，可以设置Draggable组件支持的配置Object来自定义拖动效果。</td>
+                                            <td>Boolean</td>
+                                            <td>false</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>modal</em></td>
+                                            <td>浮出层是否带有蒙版效果</td>
+                                            <td>Boolean</td>
+                                            <td>true</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>shim</em></td>
+                                            <td>是否在IE6下使用iframe垫片。<strong>注意：该配置项依赖于ui-core模块，否则无法生效！</strong></td>
+                                            <td>Boolean</td>
+                                            <td>false</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>modalCSS</em></td>
+                                            <td>自定义蒙版层的样式</td>
+                                            <td>Object</td>
+                                            <td>null</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>css</em></td>
+                                            <td>自定义浮出层容器的样式</td>
+                                            <td>Object</td>
+                                            <td>null</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>fadeIn</em></td>
+                                            <td>浮出层打开时的渐入效果时间(ms)</td>
+                                            <td>Number</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>fadeOut</em></td>
+                                            <td>浮出层关闭时的渐出效果时间(ms)</td>
+                                            <td>Number</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>timeout</em></td>
+                                            <td>延时自动关闭浮出层的时间(ms)</td>
+                                            <td>Number</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="event">
+                            <h2 class="cell-title">事件</h2>
+                            <div class="cell-content">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>事件名</th>
+                                            <th>说明</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><em>open</em></td>
+                                            <td>浮出层打开后触发</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>beforeClose</em></td>
+                                            <td>浮出层关闭前触发</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>close</em></td>
+                                            <td>浮出层关闭后触发</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                  </article>

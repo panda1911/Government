@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if gte IE 9 ]>    <html class="ie"> <![endif]-->
+<!--[if !(IE)]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>电子政务</title>
+        <meta name="description" content="电子政务"/>
+        <meta name="keywords" content="电子政务"/>
+        <!--[if IE]>
+            <script src="../scripts/base/html5-reset.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="../styles/global/merge.css"/>
+        <link rel="stylesheet" type="text/css" href="../styles/page/inbox.css"/>
+    </head>
+    <body class="page-inbox">
+    	<header id="header">
+    		<!-- 页头 -->
+    	</header>
+    	<div id="content" class="layout">
+        		<aside class="mod-tool-bar layout-toolbar">
+                    <header><h2 class="title">公文管理</h2></header>
+                    <ul class="content">
+                        <li><a class="inbox-btn" href="#" title="收件箱"></a></li>
+                        <li><a class="outbox-btn" href="#" title="发件箱"></a></li>
+                        <li><a class="draft-box-btn" href="#" title="草稿箱"></a></li>
+                        <li><a class="recycle-bin-btn" href="#" title="回收站"></a></li>
+                        <li><a class="file-cabinet-btn" href="#" title="文件柜"></a></li>
+                    </ul>
+                    <footer>工作台</footer>
+                </aside>
+                <div class="mod-file-list layout-file-list">
+                    <header id="headerContainer" class="clearfix">
+                        <div class="operate-area">
+                            <a title="操作" class="icon layout-btn" href="#"></a>
+                            <a title="操作" class="icon add-btn" href="#"></a>
+                            <a title="操作" class="icon all-select-btn" href="#"></a>
+                            <a title="操作" class="icon list-btn" data-tip-content-id="sortBox" href="#"></a>
+                            <a title="过滤" class="icon filter-btn" data-tip-content-id="filterBox" href="#"></a>
+                            <a title="删除" class="icon delete-btn" href="#"></a>
+                        </div>
+                        <div id="filterBox" class="tip-container filter-box">
+                            <div class="tip-content">
+                                <div class="tip-tail"></div>
+                                <ul class="tip-list">
+                                    <li>全部</li>
+                                    <li>未办</li>
+                                    <li>已办</li>
+                                    <li>未收藏</li>
+                                    <li>已收藏</li>
+                                    <li>特提</li>
+                                    <li>特急</li>
+                                    <li>普通</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="sortBox" class="tip-container sort-box">
+                            <div class="tip-content">
+                                <div class="tip-tail"></div>
+                                <ul class="tip-list">
+                                    <li>按时间排列</li>
+                                    <li>按紧急程度排列</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="icon search-btn" data-tip-content-id="searchBox" href="#" title="搜索"></a>
+                        <div id="searchBox" class="tip-container towards-the-right search-box">
+                            <div class="tip-content">
+                                <div class="tip-tail"></div>
+                                <ul>
+                                    <li>
+                                        <label>搜索：</label>
+                                        <input type="text" placeholder="搜索">
+                                    </li>
+                                    <li>
+                                        <label>搜索内容：</label>
+                                        <input type="text" placeholder="搜索内容">
+                                    </li>
+                                    <li class="button-area">
+                                        <button class="btn" type="button">确定</button>
+                                        <button class="btn cancel-btn" type="button">取消</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="paging-area">
+                            <a class="icon previous-btn" href="#" title="上一页"></a>
+                            <a class="skip-btn" href="#" title="1">1</a>
+                            <a class="icon next-btn" href="#" title="上一页"></a>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="file-list">
+                            <div class="cell-file current">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                            <div class="cell-file">
+                                <div class="cell-header">
+                                    <h3 class="title"><label><em class="imitate-checkbox"><input type="checkbox" autocomplete="off"/></em>公文</label></h3>
+                                    <span class="status">待登记</span>
+                                </div>
+                                <div class="cell-content">
+                                    <p>阿德进风口垃圾反馈量</p>
+                                </div>
+                                <div class="cell-footer">
+                                    <span class="identifier">编号</span>
+                                    <span class="file-date">2012-12-12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="mod-file-content layout-file-content">
+                    <header>
+                        <a class="icon edit-btn" href="#" title="编辑"></a>
+                        <div class="btn-group">
+                            <a class="btn active" href="#" title="办公单">办公单</a>
+                            <a class="btn" href="#" title="正文">正文</a>
+                            <a class="btn" href="#" title="附件">附件</a>
+                            <a class="btn" href="#" title="参考">参考</a>
+                        </div>
+                        <a class="icon favorites-btn" href="#" title="收藏"></a>
+                        <a class="icon print-btn" href="#" title="打印"></a>
+                    </header>
+                    <div class="content">
+                        <img src="../images/demo.gif"/>
+                    </div>
+                </article>
+    	</div>
+    	<footer id="footer">
+    		<!-- 页尾 -->
+    	</footer>
+        <script type="text/javascript" src="../scripts/global/merge.js"></script>
+        <script type="text/javascript" src="../scripts/page/inbox.js"></script>
+    </body>
+</html>

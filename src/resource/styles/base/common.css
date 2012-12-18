@@ -1,0 +1,57 @@
+/**
+ * 基础样式
+ * @author : panda;
+ * @createTime : 2012-10-16;
+ */
+.clear-float,
+.list,
+.float-container{
+    zoom:1;
+}
+.clear-float:after,
+.list:after,
+.float-container:after{
+    display:block;
+    clear:both;
+    height:0;
+    content:"\0020";
+}
+.ms-yh{
+    font-family: "\5FAE\8F6F\96C5\9ED1", /* 微软雅黑，默认特殊标题字体 */
+                "\9ED1\4F53", /* 黑体，win下替换字体 */
+                "\6587\6CC9\9A7F\6B63\9ED1\4F53", /* 文泉驿正黑体，unix/linux下替换字体 */
+                "\534E\6587\7EC6\9ED1"; /* 华文细黑，mac os下替换字体 */
+    font-weight: 400; /* 默认为细体 */
+}
+.list li{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.float-col{
+    float: left;
+}
+header,
+.cell-header{
+ 	zoom:1;
+}
+header:after,
+.cell-header:after{
+ 	display:block;
+    clear:both;
+    height:0;
+    content:"\0020";
+}
+header .title,
+.cell-header .title{
+ 	float: left;
+}
+a:link,
+a:visited{
+    text-decoration: none;
+    color: #3366cc;
+}
+a:hover{
+    text-decoration: underline;
+}

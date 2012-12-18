@@ -1,0 +1,28 @@
+/**
+ * 栅栏布局
+ * @author : panda
+ * @createTime : 2012-11-18
+ */
+.grid-container{
+	width: 1440px;
+	margin: 0 auto;
+	min-height: 650px;
+}
+.row{
+	*zoom: 1;
+}
+.row:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: "\0020";
+}
+.row>div:last-child{
+	margin-right: 0;
+}
+.grid-fixed{
+	margin-right: 0!important;
+}
+.ie8 .row{
+	margin: 0 -10px;
+}

@@ -1,0 +1,183 @@
+                  <article id="ui-tabs" class="mod-doc">
+                    <header>
+                        <h1 class="title">ui-tabs:tab切换组件</h1>
+                    </header>
+                    <div class="content">
+                        <section class="overview">
+                            <h2 class="cell-title">介绍</h2>
+                            <div class="cell-content">
+                                tabs切换组件，例外提供懒加载（图片与HTML的懒加载）与动画效果（渐隐渐现、滚动效果）扩展。其中效果扩展中经过简单配置便可实现焦点图与走马灯效果。
+                            </div>
+                        </section>
+                        <section class="how">
+                            <h2 class="cell-title">如何使用</h2>
+                            <div class="cell-content">
+                                <pre class="sh_javascript">
+//简单的tabs切换
+$.use('ui-tabs',function(){
+    $('...').tabs(options);
+});</pre>
+                                <pre class="sh_javascript">
+//在切换时加上动画效果
+$.use('ui-tabs-effect',function(){
+    $('...').tabs(options);
+});</pre>
+                            </div>
+                        </section>
+                        <section class="demo">
+                            <div class="cell-content">
+                                <a class="btn btn-large btn-danger" href="http://wd.alibaba-inc.com/fdevlib/examples/fdev4/jQuery.ui.tabs.html" title="演示demo">demo</a>
+                            </div>
+                        </section>
+                        <section class="config">
+                            <h2 class="cell-title">配置</h2>
+                            <div class="cell-content">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>参数名</th>
+                                            <th>说明</th>
+                                            <th>类型</th>
+                                            <th>default</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><em>isAutoPlay</em></td>
+                                            <td>是否自动切换，默认为自动切换</td>
+                                            <td>Boolean</td>
+                                            <td>true</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>timeDelay</em></td>
+                                            <td>自动切换的时间间隔，单位为“秒”</td>
+                                            <td>Number</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>torpid</em></td>
+                                            <td>事件产生后与切换动作之间的时间差，单位为“毫秒”</td>
+                                            <td>Number</td>
+                                            <td>200</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>event</em></td>
+                                            <td>可触发动作的事件，如：click, mouseover|mouseout</td>
+                                            <td>String</td>
+                                            <td>'mouseover|mouseout'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>currentClass</em></td>
+                                            <td>承载当前title触点样式的class名</td>
+                                            <td>String</td>
+                                            <td>'current'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>titleSelector</em></td>
+                                            <td>可以表示title触点集的selector</td>
+                                            <td>String</td>
+                                            <td>'.f-tab-t'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>boxSelector</em></td>
+                                            <td>可以表示box集的selector</td>
+                                            <td>String</td>
+                                            <td>'.f-tab-b'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>selected</em></td>
+                                            <td>设置初始化时第几个触点为当前状态，默认从0开始。当设置为负数时，初始化时的当前触点将是随机的。</td>
+                                            <td>Number</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="config">
+                            <h2 class="cell-title">动画效果配置</h2>
+                            <div class="cell-content">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>参数名</th>
+                                            <th>说明</th>
+                                            <th>类型</th>
+                                            <th>default</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><em>effect</em></td>
+                                            <td>动画效果，可选值：none{无}|scroll{滚动}|fade{渐隐渐现}|function(){自定义}</td>
+                                            <td>String</td>
+                                            <td>'none'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>speed</em></td>
+                                            <td>动画播放速度，可选值：slow|normal|fast|数值(单位：毫秒)</td>
+                                            <td>String || Number</td>
+                                            <td>'slow'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>scrollType</em></td>
+                                            <td>滚动方式，loop{循环}|fill{空白填充}|break{不填充}，只对滚动效果生效</td>
+                                            <td>String</td>
+                                            <td>'fill'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>perItem</em></td>
+                                            <td>每次滚动的子元素数量，只对滚动效果生效</td>
+                                            <td>Number</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>easing</em></td>
+                                            <td>动画效果，swing|easeInQuad|easeOutQuad</td>
+                                            <td>String</td>
+                                            <td>'swing'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>subLength</em></td>
+                                            <td>滚动时每个子元素的宽（高）度，默认自动计算，只对滚动效果生效</td>
+                                            <td>Number</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>direction</em></td>
+                                            <td>滚动方向，可选值：left|right|up|down，只对滚动效果生效</td>
+                                            <td>String</td>
+                                            <td>'left'</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="event">
+                            <h2 class="cell-title">事件</h2>
+                            <div class="cell-content">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>事件名</th>
+                                            <th>参数</th>
+                                            <th>说明</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><em>select</em></td>
+                                            <td>e:Event事件对象;obj:{index:idx}</td>
+                                            <td>setBox前触发</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>show</em></td>
+                                            <td>e:Event事件对象;obj:{index:idx}</td>
+                                            <td>setBox后触发</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                  </article>

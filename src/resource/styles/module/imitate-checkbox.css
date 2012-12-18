@@ -1,0 +1,20 @@
+/**
+ * 模拟checkbox
+ * @author : panda;
+ * @createTime : 2012-11-29;
+ */
+.imitate-checkbox{
+	display: inline-block;
+	height: 11px;
+	width: 11px;
+	border: 1px solid #3d3d3d;
+	background-color: #FFF;
+	cursor: pointer;
+}
+.imitate-checkbox.checked{
+	border-color: #464748;
+	background-color: #459af7;
+}
+.imitate-checkbox input[type="checkbox"]{
+	display: none;
+}

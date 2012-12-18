@@ -1,0 +1,100 @@
+.icon{
+	background: url("../../images/icon-bg-new.png") 0 0 no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.layout-btn{
+	background-position: 0 0;
+}
+.add-btn{
+	background-position: 0 -50px;
+}
+.all-select-btn{
+	background-position: 0 -100px;
+}
+.list-btn{
+	background-position: 0 -150px;
+}
+.filter-btn{
+	background-position: 0 -200px;
+}
+.delete-btn{
+	background-position: 0 -250px;
+}
+.previous-btn{
+	background-position: 7px -300px;
+}
+.next-btn{
+	background-position: -50px -350px;
+}
+.search-btn{
+	background-position: 0 -400px;
+}
+.edit-btn{
+	background-position: 0 -500px;
+}
+.favorites-btn{
+	background-position: 0 -600px;
+}
+.print-btn{
+	background-position: 0 -547px;
+}
+.up-btn{
+	background-position: 0 -950px;
+}
+.down-btn{
+	background-position: 0 -1000px;
+}
+.export-btn{
+	background-position: 0 -1046px;
+}
+.layout-btn:hover{
+	background-position: -50px 0;
+}
+.add-btn:hover{
+	background-position: -50px -50px;
+}
+.all-select-btn:hover{
+	background-position: -50px -100px;
+}
+.list-btn:hover,
+.list-btn.tip-show{
+	background-position: -50px -150px;
+}
+.filter-btn:hover,
+.filter-btn.tip-show{
+	background-position: -50px -200px;
+}
+.delete-btn:hover{
+	background-position: -50px -250px;
+}
+.previous-btn:hover{
+	background-position: -43px -300px;
+}
+.next-btn:hover{
+	background-position: 0 -350px;
+}
+.search-btn:hover,
+.search-btn.tip-show{
+	background-position: -50px -400px;
+}
+.edit-btn:hover{
+	background-position: -50px -500px;
+}
+.favorites-btn:hover{
+	background-position: -50px -600px;
+}
+.print-btn:hover{
+	background-position: -50px -547px;
+}
+.up-btn:hover{
+	background-position: -50px -950px;
+}
+.down-btn:hover{
+	background-position: -50px -1000px;
+}
+.export-btn:hover{
+	background-position: -50px -1046px;
+}

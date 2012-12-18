@@ -1,0 +1,172 @@
+/**
+ * 系统布局
+ * @author : panda
+ * @createTime : 2012-11-18
+ */
+.mod-tool-bar .content a{
+	background: url("../../images/toolbar-bg-new.png") 0 0 no-repeat;
+}
+.mod-tool-bar header{
+	height: 40px;
+	background: #2a527e url("../../images/tool-bar-header-shadow-bg.png") right 0 repeat-y;
+	line-height: 40px;
+}
+.mod-tool-bar header .title{
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	color: #FFF;
+}
+.mod-tool-bar .content{
+	height: 678px;
+	background-color: #dfdfdf;
+	background: #dfdfdf url("../../images/tool-bar-shadow-bg.png") right 0 repeat-y;
+	padding: 0 9px 0 10px;
+}
+.mod-tool-bar .content li{
+	padding: 10px 0;
+	border-top: 1px solid #ddd;
+}
+.mod-tool-bar .content a{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+}
+.page-inbox .mod-tool-bar .content .inbox-btn{
+	background-position: -100px 0;
+	cursor: default;
+}
+.page-batch-processing .mod-tool-bar .content .batch-processing-btn{
+	background-position: -100px -700px;
+	cursor: default;
+}
+.page-organization-management .mod-tool-bar .content .organization-management-btn{
+	background-position: -100px -500px;
+	cursor: default;
+}
+.page-user-management .mod-tool-bar .content .user-management-btn{
+	background-position: -100px -600px;
+	cursor: default;
+}
+.mod-tool-bar .content .inbox-btn{
+	background-position: 0 0;
+}
+.mod-tool-bar .content .inbox-btn:hover{
+	background-position: -100px 0;
+}
+.mod-tool-bar .content .outbox-btn{
+	background-position: 0 -100px;
+}
+.mod-tool-bar .content .outbox-btn:hover{
+	background-position: -100px -100px;
+}
+.mod-tool-bar .content .draft-box-btn{
+	background-position: 0 -200px;
+}
+.mod-tool-bar .content .draft-box-btn:hover{
+	background-position: -100px -200px;
+}
+.mod-tool-bar .content .recycle-bin-btn{
+	background-position: 0 -300px;
+}
+.mod-tool-bar .content .recycle-bin-btn:hover{
+	background-position: -100px -300px;
+}
+.mod-tool-bar .content .file-cabinet-btn{
+	background-position: 0 -400px;
+}
+.mod-tool-bar .content .file-cabinet-btn:hover{
+	background-position: -100px -400px;
+}
+.mod-tool-bar .content .organization-management-btn{
+	background-position: 0 -500px;
+}
+.mod-tool-bar .content .organization-management-btn:hover{
+	background-position: -100px -500px;
+}
+.mod-tool-bar .content .user-management-btn{
+	background-position: 0 -600px;
+}
+.mod-tool-bar .content .user-management-btn:hover{
+	background-position: -100px -600px;
+}
+.mod-tool-bar .content .batch-processing-btn{
+	background-position: 0 -700px;
+}
+.mod-tool-bar .content .batch-processing-btn:hover{
+	background-position: -100px -700px;
+}
+.mod-tool-bar footer{
+	height: 41px;
+	border-top: 1px solid #6f6f6f;
+	background: #dfdfdf url("../../images/tool-bar-shadow-bg.png") right 0 repeat-y;
+	line-height: 41px;
+	text-align: center;
+	font-size: 14px;
+	color: #9a9a9a;
+}
+.mod-file-list header{
+	border-right: 1px solid #aaa;
+}
+.mod-file-list .content{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+.mod-file-content .content{
+	height: 100%;
+	overflow-y: auto;
+}
+.layout-file-content header{
+	height: 39px;
+	border-bottom: 1px solid #7f7f7f;
+	text-align: center;
+}
+.layout{
+	width: 100%;
+	min-width: 1280px;
+	position: relative;
+	margin: 0 auto;
+}
+.layout .layout-toolbar{
+	width: 84px;
+	height: 720px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.layout .layout-file-list{
+	width: 450px;
+	height: 720px;
+	position: absolute;
+
+	top: 0;
+	left: 84px;
+}
+.layout .layout-file-content{
+	height: 720px;
+	margin-left: 534px;
+}
+.layout-file-list header .operate-area{
+	float: left;
+	margin-left: 20px;
+}
+.layout-file-list header .operate-area a{
+	margin-right: 14px;
+}
+.layout-file-list header{
+	position: relative;
+	height: 39px;
+	line-height: 40px;
+	background: url("../../images/list-shadow-bg.png") right 0 repeat-y;
+	border-bottom: 1px solid #7f7f7f;
+}
+.layout-file-list .content{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background: url("../../images/list-shadow-bg.png") right 0 repeat-y;
+}
+.page-batch-processing .layout-file-content{
+	margin-left: 84px;
+}

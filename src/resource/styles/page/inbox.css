@@ -1,0 +1,140 @@
+/**
+ * 收件箱样式
+ * @author : panda
+ * @createTime : 2012-11-18
+ */
+.mod-file-list header .search-btn{
+	float: right;
+	margin: 12px 20px 0 0;
+}
+.mod-file-list header .paging-area{
+	float: right;
+}
+.file-list .cell-file.current{
+	background-color: #daebfd;
+}
+.cell-file{
+	height: 136px;
+	border-bottom: 1px solid #ccc;
+	padding: 0 12px 0 25px;
+	font-size: 14px;
+}
+.cell-file:hover{
+	background-color: #daebfd;
+}
+.cell-file .cell-header,
+.cell-file .cell-footer,
+.mod-file-content header{
+	*zoom: 1;
+	color: #666;
+}
+.cell-file .cell-header:before,
+.cell-file .cell-header:after,
+.cell-file .cell-footer:before,
+.cell-file .cell-footer:after,
+.mod-file-content header:after{
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.cell-file .cell-header:after,
+.cell-file .cell-footer:after,
+.mod-file-content header:after{
+  clear: both;
+}
+.cell-file .cell-header{
+	height: 32px;
+	line-height: 40px;
+
+}
+.cell-file .cell-header .title{
+	float: left;
+	height: 32px;
+}
+.cell-file .cell-header .title label{
+	display: block;
+	height: 32px;
+	line-height: 40px;
+}
+.cell-file .cell-header .title label .imitate-checkbox{
+	margin-right: 7px;
+}
+.cell-file .cell-header .status{
+	float: right;
+}
+.cell-file .cell-content{
+	height: 72px;
+	overflow: hidden;
+}
+.cell-file .cell-content p{
+	line-height: 24px;
+	color: #333;
+}
+.cell-file .cell-footer{
+	height: 30px;
+	line-height: 24px;
+}
+.cell-file .cell-footer .identifier{
+	float: left;
+}
+.cell-file .cell-footer .file-date{
+	float: right;
+}
+.mod-file-content header .btn-group{
+	margin: 6px 0 0 0;
+}
+.mod-file-content header .btn-toolbar a:link{
+	text-decoration: none;
+}
+.mod-file-content header .edit-btn{
+	float: left;
+	margin: 12px 0 0 20px;
+}
+.mod-file-content header .favorites-btn{
+	float: right;
+	margin: 12px 20px 0 14px;
+}
+.mod-file-content header .print-btn{
+	float: right;
+	margin-top: 12px;
+}
+.show-search-box .search-box{
+	display: block;
+}
+.show-search-box .search-btn{
+	background-position: -50px -400px;
+}
+.search-box{
+	display: none;
+	position: absolute;
+	top: 28px;
+	right: 10px;
+}
+.search-box .tip-content{
+	width: 393px;
+	padding: 10px;
+}
+.search-box label{
+	display: inline-block;
+	width: 75px;
+	padding-left: 10px;
+	margin-bottom: 0;
+}
+.search-box input{
+	width: 280px;
+}
+.search-box .button-area{
+	padding-left: 252px;
+}
+.filter-box{
+	display: none;
+	position: absolute;
+	top: 32px;
+	left: 163px;
+}
+.sort-box{
+	display: none;
+	position: absolute;
+	top: 32px;
+	left: 125px;
+}

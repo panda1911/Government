@@ -1,0 +1,19 @@
+{
+	"name" : "前端知识结构树",
+	"structure" : [
+		{
+			"name" : "节点一",
+			"url" : "http://163.com",
+			"chirdren" : [{
+					"name" : "子节点一",
+					"url" : "http://taobao.com"
+				},{
+					"name" : "子节点二",
+					"url" : "http://tmall.com"
+				}]
+		},{
+			"name" : "节点二",
+			"url" : "http://sina.com"
+		}
+	]
+}

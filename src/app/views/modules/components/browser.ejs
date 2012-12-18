@@ -1,0 +1,47 @@
+                  <article id="web-browser" class="mod-doc">
+                    <header>
+                        <h1 class="title">web-browser:浏览器历史</h1>
+                    </header>
+                    <div class="content">
+                        <section class="overview">
+                            <h2 class="cell-title">介绍</h2>
+                            <div class="cell-content">
+                                提供“加入收藏夹”、”设为首页“两个方法，部分浏览器不兼容。
+                            </div>
+                        </section>
+                        <section class="how">
+                            <h2 class="cell-title">如何使用</h2>
+                            <div class="cell-content">
+                                <pre class="sh_javascript">
+//模块动态载入
+jQuery(function($){
+    $.use("web-browser",function(){
+        //...
+    });
+});</pre>
+                            </div>
+                        </section>
+                        <section class="method">
+                            <h2 class="cell-title">方法</h2>
+                            <div class="cell-content">
+                                <dl>
+                                    <dt>FE.util.setHome( url )</dt>
+                                    <dd>
+                                        <ul>
+                                            <li><strong>url:</strong>String 需要设为首页的URL</li>
+                                        </ul>
+                                        <p>设为首页</p>
+                                    </dd>
+                                    <dt>FE.util.addBookmark( url, title )</dt>
+                                    <dd>
+                                        <ul>
+                                            <li><strong>url:</strong>String 需要收藏的URL</li>
+                                            <li><strong>title:</strong>String 需要收藏的书签标题</li>
+                                        </ul>
+                                        <p>添加到收藏夹</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </section>
+                    </div>
+                  </article>

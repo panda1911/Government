@@ -1,0 +1,172 @@
+/**
+ * 组织管理样式
+ * @author : panda
+ * @createTime : 2012-12-11
+ */
+.detail-info .cell-header{
+	height: 32px;
+	line-height: 32px;
+	background-color: #eaeaea;
+}
+.detail-info .cell-header .title{
+	padding-left: 20px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #333;
+}
+.detail-info .input-box{
+	width: 446px;
+}
+.detail-info .textarea-box{
+	width: 446px;
+	height: 272px;
+}
+.detail-info .radio-box label{
+	display: inline-block;
+	white-space:nowrap;
+	margin-right: 15px;
+	padding-right: 15px;
+	color: #333;
+}
+.detail-info .cell-content{
+	height: 616px;
+	overflow-y: auto;
+}
+.detail-info .cell-footer{
+	height: 71px;
+	border-top: 1px solid #ddd;
+	background-color: #f7f7f7;
+	line-height: 71px;
+	text-align: right;
+	padding-right: 20px;
+}
+.detail-info .cell-footer .reset-btn{
+	margin-left: 9px;
+}
+.cell-membership-detail .form-list{
+	border-bottom: 1px solid #eaeaea;
+}
+.membership-credentials-box{
+	width: 416px;
+	margin-left: 10px;
+}
+.membership-credentials-box h3{
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+}
+.membership-credentials-box .organization-content{
+	margin-bottom: 16px;
+	position: relative;
+}
+.membership-credentials-box .organization-content input{
+	width: 406px;
+	cursor: pointer;
+}
+.membership-credentials-box .organization-tree-container{
+	display: none;
+	width: 384px;
+	height: 229px;
+	padding: 0 15px;
+	border: 1px solid #a0a0a0;
+	position: absolute;
+	left: 0;
+	top: 25px;
+	background-color: #FFF;
+	overflow-y: auto;
+}
+.membership-credentials-box .membership-content{
+	width: 100%;
+	height: 210px;
+	border: 1px solid #eaeaea;
+	line-height: 30px;
+}
+.checkbox{
+	display: block;
+	float: left;
+	height: 30px;
+	padding: 0 14px 0 7px;
+}
+.checkbox input{
+	float: left;
+	margin: 9px 8px 0 0;
+}
+.cell-membership-detail .no-membership-info{
+	background: url("../../images/no-membership-info-bg.png") 50% 50% no-repeat;
+}
+.batch-processing-box dl{
+	margin-left: 20px;
+}
+.batch-processing-box dt{
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+.batch-processing-box dd{
+	position: relative;
+	padding-right: 133px;
+
+}
+.batch-processing-box dd .item-container{
+	border: 1px solid #ccc;
+	min-height: 118px;
+}
+.batch-processing-box dd .item{
+	position: relative;
+	display: block;
+	float: left;
+	height: 22px;
+	padding: 0 5px;
+	background-color: #eaeaea;
+	margin: 8px 15px 0 8px;
+	line-height: 22px;
+	color: #333;
+}
+.batch-processing-box dd .item .item-close-btn{
+	display: block;
+	height: 15px;
+	width: 15px;
+	background-color: #a0a0a0;
+	position: absolute;
+	top: 0;
+	right: -15px;
+}
+.batch-processing-box dd .btn{
+	position: absolute;
+	top: 0;
+	right: 35px;
+}
+.organization-tree{
+	height: 100%;
+	padding-left: 10px;
+}
+.mod-custom-authority-dialog .content{
+	width: 710px;
+}
+.mod-custom-authority-dialog .content dl{
+	height: 270px;
+	line-height: 30px;
+}
+.mod-custom-authority-dialog .content dt{
+	margin-top: 10px;
+	float: left;
+	padding-right: 16px;
+	width: 84px;
+	text-align: right;
+	color: #666;
+}
+.mod-custom-authority-dialog .content dd{
+	margin-top: 10px;
+	float: left;
+	width: 610px;
+}
+.mod-custom-authority-dialog .content dd .input-box{
+	width: 446px;
+}
+.mod-custom-authority-dialog .content .operate-area{
+	height: 70px;
+	border-top: 1px solid #eaeaea;
+	padding-right: 13px;
+	line-height: 70px;
+	text-align: right;
+}

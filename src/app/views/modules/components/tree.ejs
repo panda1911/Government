@@ -1,0 +1,257 @@
+                  <article id="ui-tree" class="mod-doc">
+                    <header>
+                        <h1 class="title">ui-tree:树结构组件</h1>
+                    </header>
+                    <div class="content">
+                        <section class="overview">
+                            <h2 class="cell-title">介绍</h2>
+                            <div class="cell-content">
+                                树结构控件。
+                            </div>
+                        </section>
+                        <section class="how">
+                            <h2 class="cell-title">如何使用</h2>
+                            <div class="cell-content">
+                                <pre class="sh_javascript">
+//简单展示型树结构
+$.use('ui-tree',function(){
+    var tree = new Energon.tree(options);
+});</pre>
+                                <pre class="sh_javascript">
+//动态加载型树结构
+$.use('ui-tree-dynamic',function(){
+    var tree = new Energon.dynamicTree(options);
+});</pre>
+                                <pre class="sh_javascript">
+//有关联多选框的动态加载型树结构
+$.use('ui-tree-selectable-with-dynamic',function(){
+    var tree = new Energon.selectableWithDynamicTree(options);
+});</pre>
+                                <pre class="sh_javascript">
+//无关联多选框的动态加载型树结构
+$.use('ui-tree-selectable-with-single',function(){
+    var tree = new Energon.selectableWithSingleTree(options);
+});</pre>
+
+                            </div>
+                        </section>
+                        <section class="HTML">
+                            <h2 class="cell-title">HTML结构</h2>
+                            <div class="cell-content">
+                                <pre class="sh_javascript">
+&lt;div id=&quot;treeContainer&quot; class=&quot;e-tree&quot;&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;e-tree-open&quot;&gt;
+            &lt;div&gt;
+                &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                    &lt;a title=&quot;Level 1 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 1 nodes&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;e-tree-leaf&quot;&gt;
+                    &lt;div&gt;
+                        &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                        &lt;a title=&quot;Level 2 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 2 nodes&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;e-tree-last-child e-tree-leaf&quot;&gt;
+                    &lt;div&gt;
+                        &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                        &lt;a title=&quot;Level 2 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 2 nodes&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;e-tree-leaf&quot;&gt;
+            &lt;div&gt;
+                &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                &lt;a title=&quot;Level 1 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 1 nodes&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;e-tree-last-child e-tree-close&quot;&gt;
+            &lt;div&gt;
+                &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                &lt;a title=&quot;Level 1 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 1 nodes&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;e-tree-leaf&quot;&gt;
+                    &lt;div&gt;
+                        &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                        &lt;a title=&quot;Level 2 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 2 nodes&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;e-tree-last-child e-tree-leaf&quot;&gt;
+                    &lt;div&gt;
+                        &lt;i class=&quot;e-tree-structure-icon&quot;&gt;&lt;/i&gt;
+                        &lt;a title=&quot;Level 2 nodes&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;e-tree-node-icon&quot;&gt;&lt;/i&gt;Level 2 nodes&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </section>
+                        <section class="demo">
+                            <div class="cell-content">
+                                <a class="btn btn-large btn-danger" href="http://wd.alibaba-inc.com/fdevlib/examples/fdev4/jQuery.ui.tabs.html" title="演示demo">demo</a>
+                            </div>
+                        </section>
+                        <section class="config">
+                            <h2 class="cell-title">配置</h2>
+                            <div class="cell-content">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>参数名</th>
+                                            <th>说明</th>
+                                            <th>类型</th>
+                                            <th>default</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><em>container</em></td>
+                                            <td>容器元素</td>
+                                            <td>Object</td>
+                                            <td>null</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>content</em></td>
+                                            <td>树结构内容</td>
+                                            <td>Object</td>
+                                            <td>
+                                                <pre class="sh_javascript">
+[{
+    id : '节点ID',
+    name : '节点展示文案',
+    customPropertys : {},//自定义属性集，这些属性都会以'data-xxx="ooo"'的形式存放在即诶但元素上
+    hasCheckbox : true, //是否存在多选框
+    customIconClassName : '自定义节点图标展示class',
+    hasChildren : true, //是否有字节点，在动态加载时使用
+    children : [] //字节点集合
+}]</pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>clickEvent</em></td>
+                                            <td>节点点击事件</td>
+                                            <td>Function</td>
+                                            <td>
+                                                <pre class="sh_javascript">
+function(e){
+    e.preventDefault();
+    var that = this,
+    el = $(e.currentTarget);
+    //选中当前节点
+    that.pitchOnNode(that.getClosestLi(el));
+}</pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>isExpandAll</em></td>
+                                            <td>是否展开所有节点</td>
+                                            <td>Boolean</td>
+                                            <td>false</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>containerClassName</em></td>
+                                            <td>树容器的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>structureIconClassName</em></td>
+                                            <td>结构图标的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-structure-icon'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>closeParentClassName</em></td>
+                                            <td>节点关闭状态的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-close'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>openParentClassName</em></td>
+                                            <td>节点打开状态的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-open'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>nodeIconClassName</em></td>
+                                            <td>节点展示图标的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-node-icon'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>leafClassName</em></td>
+                                            <td>叶子节点的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-leaf'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>lastNodeClassName</em></td>
+                                            <td>同级节点排最后节点的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-last-child'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>currentNodeClassName</em></td>
+                                            <td>当前节点的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-current-node'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>checkboxClassName</em></td>
+                                            <td>多选框的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-checkbox'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>checkboxShowClassName</em></td>
+                                            <td>控制多选框是否显示的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-checkbox-show'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>commentClassName</em></td>
+                                            <td>节点中备注的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-comment'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>checkedClassName</em></td>
+                                            <td>控制节点是否选中的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-checked'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>halfCheckedClassName</em></td>
+                                            <td>控制节点是否半选的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-half-checked'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>loadingClassName</em></td>
+                                            <td>节点动态加载时加载动画的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-loading'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>needLoadingClassName</em></td>
+                                            <td>需要被动态加载且还未加载的节点class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-need-loading'</td>
+                                        </tr>
+                                        <tr>
+                                            <td><em>hasNoChildren</em></td>
+                                            <td>无字节点的class</td>
+                                            <td>String</td>
+                                            <td>'e-tree-has-no-children'</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                  </article>
