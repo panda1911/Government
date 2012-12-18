@@ -76,6 +76,9 @@ jQuery(function($){
 		}
 		memberBox.html(s);
 	},
+	getMemberDetail = function(memberId){
+		
+	},
 	init = function(){
 		getMembersByOrganizationId();
 		buildOrganizationTree();
@@ -94,6 +97,11 @@ jQuery(function($){
 				}
 			});
 		});
-		
+		memberBox.delegate('input[type="checkbox"]','click',function(e){
+			var el = $(this),
+			memberId = el.attr('data-member-id'),
+			isChecked = el.prop();
+
+		});
 	}();
 });
