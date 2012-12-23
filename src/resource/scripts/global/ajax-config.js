@@ -15,9 +15,15 @@
 			param : {}
 		},
 		memberList : {
-			url : 'json/membership.json',
+			url : 'json/member-list.json',
 			param : {
 				organizationId : null
+			}
+		},
+		memberDetail : {
+			url : 'json/member-detail.json',
+			param : {
+				memberId : null
 			}
 		}
 	};

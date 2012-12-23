@@ -9,8 +9,10 @@ jQuery(function($){
 	organizationTreeContainer = $('#organizationTreeContainer'),
 	selectedOrganization = $('#selectedOrganization'),
 	organizationBox = $('#organizationBox'),
+	memberInfoContainer = $('#memberInfoContainer'),
 	body = $(document.body),
 	organizationTree,
+	memberInfoCache = {},
 	showMembers = function(e){
 		e.preventDefault();
 		var that = this,
@@ -76,8 +78,71 @@ jQuery(function($){
 		}
 		memberBox.html(s);
 	},
-	getMemberDetail = function(memberId){
-		
+	getMemberDetail = function(id){
+		var config = G.ajaxConfig['memberDetail'],
+		url = config.url,
+		param = config.param;
+		param['memberId'] = id;
+		$.ajax({
+			url : url,
+			data : param,
+			dataType : 'json'
+		}).done(function(o){
+			var data;
+			if(o && o.isSuccess){
+				data = o.data;
+				buildMemberDetail(data);
+			}
+		});
+	},
+	buildMemberDetail = function(o){
+		var ret = '<ul class="member-info" data-member-id="',
+		id = o.id,
+		userName = o.userName,
+		trueName = o.trueName,
+		department = o.department,
+		authority = o.authority,
+		password = o.password;
+		ret += id;
+		ret += '">';
+		ret += '<li>';
+		ret += '<span class="info-item"><label>用户名：</label>';
+		ret += userName;
+		ret += '</span>';
+		ret += '<span class="info-item"><label>真实姓名：</label>';
+		ret += trueName;
+		ret += '</span>';
+		ret += '<span class="info-item department-info"><label>所在部门：</label>';
+		ret += department;
+		ret += '</span>';
+		ret += '</li>';
+		ret += '<li>';
+		ret += '<span class="info-item"><label>单位权限：</label>';
+		ret += authority;
+		ret += '</span>';
+		ret += '<span class="info-item"><label>密码：</label>';
+		ret += password;
+		ret += '</span>';
+		ret += '</li>';
+		ret += '</ul>';
+		memberInfoContainer.append(ret);
+		memberInfoCache['info'+id] = true;
+		manageNoInfoTip();
+	},
+	manageNoInfoTip = function(){
+		var ret = false;
+		for(var i in memberInfoCache){
+			if(memberInfoCache[i] === true){
+				ret = true;
+				break;
+			}
+		}
+		if(ret){
+			memberInfoContainer.removeClass('no-membership-info');
+		}
+		else{
+			memberInfoContainer.addClass('no-membership-info');
+		}
 	},
 	init = function(){
 		getMembersByOrganizationId();
@@ -100,8 +165,23 @@ jQuery(function($){
 		memberBox.delegate('input[type="checkbox"]','click',function(e){
 			var el = $(this),
 			memberId = el.attr('data-member-id'),
-			isChecked = el.prop();
-
+			isChecked = el.prop('checked'),
+			key = 'info'+memberId;
+			if(isChecked){
+				if(memberInfoCache[key]){
+					memberInfoContainer.find('[data-member-id="'+memberId+'"]').show();
+					memberInfoCache[key] = true;
+					manageNoInfoTip();
+				}
+				else{
+					getMemberDetail(memberId);
+				}
+			}
+			else{
+				memberInfoContainer.find('[data-member-id="'+memberId+'"]').hide();
+				memberInfoCache[key] = false;
+				manageNoInfoTip();
+			}
 		});
 	}();
 });

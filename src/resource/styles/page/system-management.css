@@ -46,6 +46,30 @@
 .cell-membership-detail .form-list{
 	border-bottom: 1px solid #eaeaea;
 }
+.cell-membership-detail .member-info{
+	margin: 0 10px;
+	border-bottom: 1px solid #eaeaea;
+	padding-left: 10px;
+	line-height: 28px;
+}
+.cell-membership-detail .member-info:nth-child(even){
+	background-color: #f4fbff;
+}
+.cell-membership-detail .member-info .info-item{
+	display: inline-block;
+	height: 28px;
+	width: 190px;
+	color: #333;
+}
+.cell-membership-detail .member-info .department-info{
+	width: 320px;
+}
+.cell-membership-detail .member-info .info-item label{
+	color: #666;
+}
+.cell-membership-detail .cell-content{
+	height: 688px;
+}
 .membership-credentials-box{
 	width: 416px;
 	margin-left: 10px;
@@ -107,11 +131,11 @@
 	padding-right: 133px;
 
 }
-.batch-processing-box dd .item-container{
+.item-container{
 	border: 1px solid #ccc;
 	min-height: 118px;
 }
-.batch-processing-box dd .item{
+.item-container .item{
 	position: relative;
 	display: block;
 	float: left;
@@ -122,7 +146,7 @@
 	line-height: 22px;
 	color: #333;
 }
-.batch-processing-box dd .item .item-close-btn{
+.item-container .item .item-close-btn{
 	display: block;
 	height: 15px;
 	width: 15px;
@@ -169,4 +193,12 @@
 	padding-right: 13px;
 	line-height: 70px;
 	text-align: right;
+}
+.mod-organization-range-dialog{
+	display: block;
+	z-index: 33;
+}
+.mod-member-range-dialog{
+	display: block;
+	z-index: 33;
 }
