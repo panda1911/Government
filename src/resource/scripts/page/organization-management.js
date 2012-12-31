@@ -15,6 +15,8 @@ jQuery(function($){
 	addOrganizationBtn = $('#addOrganizationBtn'),
 	customBtn = $('#customBtn'),
 	customAuthorityDialog = $('#customAuthorityDialog'),
+	deleteOrganizationBtn = $('#deleteOrganizationBtn'),
+	organizationTree,
 	getOrganizationDetail = function(e){
 		e.preventDefault();
 		var that = this,
@@ -56,14 +58,29 @@ jQuery(function($){
 			dataType : 'json'
 		}).done(function(o){
 			var data;
-			console.info(o);
 			if(o && o.isSuccess){
 				data = o.data;
-				new Energon.ui.tree({
+				organizationTree = new Energon.ui.selectableWithSingleTree({
 					container : organizationTreeContainer,
 					content : data,
 					clickEvent : getOrganizationDetail
 				});
+			}
+		});
+	},
+	removeOrganizations = function(ids){
+		var config = G.ajaxConfig['removeOrganizations'],
+		url = config.url,
+		param = config.param;
+		$.ajax({
+			url : url,
+			data : param,
+			dataType : 'json'
+		}).done(function(o){
+			var data;
+			if(o && o.isSuccess){
+				data = o.data;
+				
 			}
 		});
 	},
@@ -82,6 +99,16 @@ jQuery(function($){
 					fadeOut : false
 				});
 			});
+		});
+		deleteOrganizationBtn.on('click',function(e){
+			e.preventDefault();
+			var ids;
+			if(confirm('你确定要删除这些选中的组织？')){
+				if(organizationTree){
+					ids = organizationTree.getSelectedNodeIds();
+					removeOrganizations(ids);
+				}
+			}
 		});
 	}();
 });

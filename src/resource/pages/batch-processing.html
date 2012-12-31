@@ -34,6 +34,7 @@
                     </header>
                     <div class="content">
                         <div class="detail-info cell-batch-processing">
+                            <form action="#" method="post">
                             <div class="cell-header">
                                 <h2 class="title">批量用户设置</h2>
                             </div>
@@ -42,25 +43,15 @@
                                     <dl>
                                         <dt>组织范围：</dt>
                                         <dd>
-                                            <div class="item-container clear-float">
-                                                <label class="item">文二路办事处<a class="item-close-btn" href="#" title="关闭"></a></label>
-                                                <label class="item">文二路办事处<a class="item-close-btn" href="#" title="关闭"></a></label>
+                                            <div id="selectedOrganizationContainer" class="item-container clear-float">
                                             </div>
-                                            <button class="btn btn-large" type="button">添加组织</button>
+                                            <button class="btn btn-large organization-manager-btn" type="button">添加组织</button>
                                         </dd>
                                         <dt>用户范围：</dt>
                                         <dd>
-                                            <div class="item-container clear-float">
-                                                <label class="item">文二路办事处<a class="item-close-btn" href="#" title="关闭"></a></label>
+                                            <div id="selectedMemberContainer" class="item-container clear-float">
                                             </div>
-                                            <button class="btn btn-large" type="button">添加用户</button>
-                                        </dd>
-                                        <dt>角色范围：</dt>
-                                        <dd>
-                                            <div class="item-container clear-float">
-                                                <label class="item">文二路办事处<a class="item-close-btn" href="#" title="关闭"></a></label>
-                                            </div>
-                                            <button class="btn btn-large" type="button">添加角色</button>
+                                            <button class="btn btn-large member-manager-btn" type="button">添加用户</button>
                                         </dd>
                                     </dl>
                                     <ul class="form-list">
@@ -76,9 +67,14 @@
                                 </div>
                             </div>
                             <div class="cell-footer">
-                                <button class="btn" type="button">保存</button>
+                                <!-- 选中的组织ID都存在这里 -->
+                                <input type="hidden" id="selectedOrganizations"/>
+                                <!-- 选中的用户ID都存在这里 -->
+                                <input type="hidden" id="selectedMembers"/>
+                                <button class="btn" type="submit">保存</button>
                                 <button class="btn reset-btn" type="button">重置</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </article>
@@ -94,23 +90,22 @@
             <div class="content">
                 <div class="float-container">
                     <div class="float-col">
-                        <div class="cell-organization-tree e-tree"></div>
+                        <div id="organizationTreeContainer" class="cell-organization-tree e-tree"></div>
                     </div>
                     <div class="float-col">
-                        <div class="cell-organization-option item-container clear-float">
-                            <label class="item">文二路办事处<a class="item-close-btn" href="#" title="关闭"></a></label>
+                        <div id="selectedOrganizationBox" class="cell-organization-option item-container clear-float">
                         </div>
                     </div>
                 </div>
+                <div class="operate-area">
+                    <button class="btn submit-btn" type="button">确定</button>
+                    <button class="btn cancel-btn dialog-cancel-btn" type="button">取消</button>
+                </div>
             </div>
-            <footer>
-                <button class="btn" type="button">确定</button>
-                <button class="btn cancel-btn" type="button">取消</button>
-            </footer>
         </article>
         <article id="memberRangeDialog" class="dialog mod-member-range-dialog">
             <header>
-                <h1 class="title">组织范围</h1>
+                <h1 class="title">用户范围</h1>
                 <a href="#" title="关闭" class="dialog-close-btn"></a>
             </header>
             <div class="content">
@@ -126,30 +121,22 @@
                             </div>
                             <h3 class="membership-title">部门成员：</h3>
                             <div id="memberBox" class="membership-content clear-float">
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
-                                <label class="checkbox"><input type="checkbox"/>全部成员</label>
                             </div>
                         </div>
                     </div>
                     <div class="float-col">
-                        <div class="cell-member-option item-container clear-float">
-                            <label class="item">文二路办事处<a class="item-close-btn" href="#" title="关闭"></a></label>
+                        <div id="selectedMemberBox" class="cell-member-option item-container clear-float">
+                            
                         </div>
                     </div>
                 </div>
+                <div class="operate-area">
+                    <button class="btn submit-btn" type="button">确定</button>
+                    <button class="btn cancel-btn dialog-cancel-btn" type="button">取消</button>
+                </div>
             </div>
-            <footer>
-                <button class="btn" type="button">确定</button>
-                <button class="btn cancel-btn" type="button">取消</button>
-            </footer>
         </article>
         <script type="text/javascript" src="../scripts/global/merge.js"></script>
-        <script type="text/javascript" src="../scripts/page/inbox.js"></script>
+        <script type="text/javascript" src="../scripts/page/batch-processing.js"></script>
     </body>
 </html>

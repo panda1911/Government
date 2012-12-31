@@ -3,6 +3,9 @@
  * @author : panda
  * @createTime : 2012-12-11
  */
+.item-container .item .item-close-btn{
+	background: url("../../images/icon-bg-new.png") 0 0 no-repeat;
+}
 .detail-info .cell-header{
 	height: 32px;
 	line-height: 32px;
@@ -148,12 +151,16 @@
 }
 .item-container .item .item-close-btn{
 	display: block;
-	height: 15px;
-	width: 15px;
+	height: 13px;
+	width: 13px;
 	background-color: #a0a0a0;
+	background-position: 0 -1100px;
 	position: absolute;
 	top: 0;
-	right: -15px;
+	right: -13px;
+}
+.item-container .item .item-close-btn:hover{
+	background-position: -50px -1100px;
 }
 .batch-processing-box dd .btn{
 	position: absolute;
@@ -195,10 +202,57 @@
 	text-align: right;
 }
 .mod-organization-range-dialog{
-	display: block;
-	z-index: 33;
+	
+}
+.mod-organization-range-dialog .cell-organization-tree{
+	width: 281px;
+	height: 340px;
+	padding: 0 8px;
+	background-color: #f4fbff;
+	border-right: 1px solid #eaeaea;
+}
+.mod-organization-range-dialog .cell-organization-option{
+	width: 448px;
+	height: 340px;
+	border: 0 none;
+	background-color: #FFF;
+}
+.mod-organization-range-dialog .operate-area{
+	height: 68px;
+	border-top: 1px solid #eaeaea;
+	padding-right: 13px;
+	text-align: right;
+	line-height: 68px;
 }
 .mod-member-range-dialog{
-	display: block;
-	z-index: 33;
+	
+}
+.mod-member-range-dialog .membership-credentials-box{
+	width: 347px;
+	height: 339px;
+	background-color: #f4fbff;
+	border-right: 1px solid #eaeaea;
+}
+.mod-member-range-dialog .membership-credentials-box .input-box{
+	width: 328px;
+}
+.mod-member-range-dialog .membership-credentials-box .membership-content{
+	width: 334px;
+	height: 232px;
+	background-color: #FFF;
+}
+.mod-member-range-dialog .cell-member-option{
+	width: 398px;
+	height: 338px;
+	border: 0 none;
+}
+.mod-member-range-dialog .operate-area{
+	height: 68px;
+	border-top: 1px solid #eaeaea;
+	padding-right: 13px;
+	text-align: right;
+	line-height: 68px;
+}
+.batch-processing-box .item-container .item{
+	margin-right: 0;
 }

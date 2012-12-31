@@ -40,4 +40,31 @@
             });
         }()
  	};
+    G.common.idCache = function(){
+        this.a = [];
+        this.save = function(o){
+            this.a.push(o);
+        };
+        this.remove = function(id){
+            for(var i=0,l=this.a.length;i<l;i++){
+                if(this.a[i]['id'] === id){
+                    this.a.splice(i,1);
+                    return;
+                }
+            }
+        };
+        this.output = function(){
+            return this.a;
+        };
+        this.has = function(id){
+            var ret = false;
+            for(var i=0,l=this.a.length;i<l;i++){
+                if(this.a[i]['id'] === id){
+                    ret = true;
+                    break;
+                }
+            }
+            return ret;
+        };
+    };
  })(jQuery);

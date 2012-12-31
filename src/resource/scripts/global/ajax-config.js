@@ -25,6 +25,12 @@
 			param : {
 				memberId : null
 			}
+		},
+		removeOrganizations : {
+			url : 'json/remove-organization.json',
+			param : {
+				organizationIds : null
+			}
 		}
 	};
 })(jQuery);
