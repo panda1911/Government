@@ -72,15 +72,17 @@ jQuery(function($){
 		var config = G.ajaxConfig['removeOrganizations'],
 		url = config.url,
 		param = config.param;
+		if(!ids){
+			alert('请选择要删除的组织！');
+			return;
+		}
 		$.ajax({
 			url : url,
 			data : param,
 			dataType : 'json'
 		}).done(function(o){
-			var data;
 			if(o && o.isSuccess){
-				data = o.data;
-				
+				location.reload();
 			}
 		});
 	},
