@@ -23,7 +23,7 @@
                 "\534E\6587\7EC6\9ED1"; /* 华文细黑，mac os下替换字体 */
     font-weight: 400; /* 默认为细体 */
 }
-.list li{
+.list>li{
     float: left;
 }
 .hide{

@@ -11,6 +11,13 @@
 	background: #2a527e url("../../images/tool-bar-header-shadow-bg.png") right 0 repeat-y;
 	line-height: 40px;
 }
+.mod-header .sub-list li a{
+	background: url("../../images/sub-menu-bg.png") 0 0 no-repeat;
+}
+.mod-header .addition-area .settings-btn,
+.mod-header .addition-area .personal-info h3{
+	background: url("../../images/icon-bg-new.png") 0 0 no-repeat;
+}
 .mod-tool-bar header .title{
 	width: 100%;
 	text-align: center;
@@ -169,4 +176,176 @@
 }
 .page-batch-processing .layout-file-content{
 	margin-left: 84px;
+}
+.mod-header{
+	height: 66px;
+	background-color: #1e6cc2;
+	line-height: 66px;
+}
+.mod-header:after{
+	display:block;
+    clear:both;
+    height:0;
+    content:"\0020";
+}
+.mod-header .logo{
+	float: left;
+}
+.mod-header .logo a{
+	display: block;
+	float: left;
+	height: 66px;
+	width: 170px;
+}
+.mod-header .menu-list{
+	float: left;
+}
+.mod-header .menu-list>li{
+	height: 66px;
+}
+.mod-header .menu-list>li>a{
+	padding: 0 10px;
+	border-left: 1px solid #3399cc;
+	font-size: 14px;
+	font-weight: 700;
+}
+.mod-header .menu-list>li>a:link,
+.mod-header .menu-list>li>a:visited{
+	color: #8fb6e1;
+}
+.mod-header .menu-list>li>a:hover{
+	text-decoration: none;
+}
+.mod-header .sub-list{
+	position: relative;
+}
+.mod-header .sub-list:hover{
+	background-color: #18569b;
+}
+.mod-header .sub-list:hover dd{
+	display: block;
+}
+.mod-header .sub-list dt{
+	padding: 0 28px 0 19px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #FFF;
+	cursor: pointer;
+}
+.mod-header .sub-list dd{
+	display: none;
+	position: absolute;
+	top: 66px;
+	left: -165px;
+	padding: 29px 23px 26px;
+	border: 1px solid #ddd;
+	background-color: #FFF;
+	z-index: 1;
+}
+.mod-header .sub-list ul{
+	width: 360px;
+}
+.mod-header .sub-list li a{
+	display: block;
+	height: 26px;
+	width: 72px;
+	padding-top: 50px;
+	line-height: 26px;
+	text-align: center;
+	font-family: "\5FAE\8F6F\96C5\9ED1", /* 微软雅黑，默认特殊标题字体 */
+                "\9ED1\4F53", /* 黑体，win下替换字体 */
+                "\6587\6CC9\9A7F\6B63\9ED1\4F53", /* 文泉驿正黑体，unix/linux下替换字体 */
+                "\534E\6587\7EC6\9ED1"; /* 华文细黑，mac os下替换字体 */
+}
+.mod-header .sub-list li a.office-management{
+	background-position: 11px 0;
+}
+.mod-header .sub-list li a.notification{
+	background-position: 11px -100px;
+}
+.mod-header .sub-list li a.magazine{
+	background-position: 11px -200px;
+}
+.mod-header .sub-list li a.internal-affairs{
+	background-position: 11px -300px;
+}
+.mod-header .sub-list li a.system-management{
+	background-position: 11px -400px;
+}
+.mod-header .sub-list li a:link,
+.mod-header .sub-list li a:visited{
+	color: #3d3d3d;
+}
+.mod-header .addition-area{
+	float: right;
+}
+.mod-header .addition-area .search-area{
+	float: left;
+}
+.mod-header .addition-area .personal-info{
+	float: left;
+	position: relative;
+}
+.mod-header .addition-area .personal-info h3{
+	height: 66px;
+	padding: 0 15px 0 23px;
+	background-position: 0 -877px;
+	font-size: 14px;
+	color: #FFF;
+}
+.mod-header .personal-info .personal-info-box{
+	position: absolute;
+	left: -82px;
+	top: 66px;
+	width: 220px;
+	z-index: 1;
+}
+.mod-header .personal-info .personal-info-box dl{
+	padding: 19px 11px;
+}
+.mod-header .personal-info .personal-info-box .tip-tail{
+	left: 105px;
+}
+.mod-header .personal-info .personal-info-box dt{
+	float: left;
+	height: 56px;
+	width: 56px;
+	overflow: hidden;
+	margin-right: 6px;
+	border: 1px solid #cfcfcf;
+}
+.mod-header .personal-info .personal-info-box dt a{
+	display: block;
+	height: 56px;
+	width: 56px;
+	overflow: hidden;
+}
+.mod-header .personal-info .personal-info-box dd.name{
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #333;
+}
+.mod-header .personal-info .personal-info-box dd.company{
+	height: 38px;
+	overflow: hidden;
+	line-height: 19px;
+	color: #333;
+}
+.mod-header .personal-info .personal-info-box .operate-area{
+	clear: both;
+	text-align: center;
+}
+.mod-header .addition-area .settings-btn{
+	float: left;
+	display: block;
+	height: 66px;
+	padding: 0 16px 0 23px;
+	background-position: 0 -827px;
+	line-height: 66px;
+	font-size: 14px;
+}
+.mod-header .addition-area .settings-btn:link,
+.mod-header .addition-area .settings-btn:visited{
+	color: #FFF;
 }
