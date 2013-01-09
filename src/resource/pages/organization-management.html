@@ -17,7 +17,51 @@
     </head>
     <body class="page-organization-management">
     	<header id="header">
-    		<!-- 页头 -->
+    		<div class="mod-header">
+                <h1 class="logo"><a href="#" title="电子政务"><img alt="电子政务logo" src="../images/logo.png"/></a></h1>
+                <ul class="menu-list list">
+                    <li>
+                        <dl class="sub-list">
+                            <dt>行政办公</dt>
+                            <dd>
+                                <ul class="list">
+                                    <li><a class="office-management" href="#" title="公文管理">公文管理</a></li>
+                                    <li><a class="notification" href="#" title="通知">通知</a></li>
+                                    <li><a class="magazine" href="#" title="内刊">内刊</a></li>
+                                    <li><a class="internal-affairs" href="#" title="内部事务">内部事务</a></li>
+                                    <li><a class="system-management" href="#" title="系统管理">系统管理</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" title="系统首页">系统首页</a></li>
+                    <li><a href="#" title="单位首页">单位首页</a></li>
+                </ul>
+                <div class="addition-area">
+                    <div class="input-apend search-area">
+                        <input type="text" class="input-box"/>
+                        <button type="button" class="btn"></button>
+                    </div>
+                    <div class="personal-info">
+                        <h3 data-tip-content-id="personalInfoBox">徐汇甲</h3>
+                        <div id="personalInfoBox" class="tip-container personal-info-box">
+                            <div class="tip-content">
+                                <div class="tip-tail"></div>
+                                <dl>
+                                    <dt><img src="../images/personal-pic.png" alt="个人照片"/></dt>
+                                    <dd class="name">徐汇甲</dd>
+                                    <dd class="company">上海财力信息科技有限公司</dd>
+                                    <dd class="operate-area">
+                                        <a class="btn" href="#" title="查看个人资料">查看个人资料</a>
+                                        <a class="btn" href="#" title="退出">退出</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" title="设置" class="settings-btn">设置</a>
+                </div>   
+            </div>
     	</header>
     	<div id="content" class="layout">
         		<aside class="mod-tool-bar layout-toolbar">
@@ -150,6 +194,7 @@
                 </div>
             </div>
         </article>
+        <script type="text/javascript" src="../scripts/lib/beast/merge.js"></script>
         <script type="text/javascript" src="../scripts/global/merge.js"></script>
         <script type="text/javascript" src="../scripts/page/organization-management.js"></script>
     </body>

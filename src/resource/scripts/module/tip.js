@@ -6,7 +6,7 @@
 (function($){
 	var showStatusClassName = 'tip-show',
 	doc = $(document);
-	$('#content').delegate('[data-tip-content-id]','click',function(e){
+	doc.delegate('[data-tip-content-id]','click',function(e){
 		e.preventDefault();
 		var el = $(this),
 		tipContentId = el.attr('data-tip-content-id'),

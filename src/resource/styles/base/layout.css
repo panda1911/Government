@@ -15,7 +15,9 @@
 	background: url("../../images/sub-menu-bg.png") 0 0 no-repeat;
 }
 .mod-header .addition-area .settings-btn,
-.mod-header .addition-area .personal-info h3{
+.mod-header .addition-area .personal-info h3,
+.mod-header .search-area .btn,
+.mod-header .sub-list dt{
 	background: url("../../images/icon-bg-new.png") 0 0 no-repeat;
 }
 .mod-tool-bar header .title{
@@ -227,6 +229,7 @@
 }
 .mod-header .sub-list dt{
 	padding: 0 28px 0 19px;
+	background-position: 84px -1169px;
 	font-size: 14px;
 	font-weight: 700;
 	color: #FFF;
@@ -236,7 +239,7 @@
 	display: none;
 	position: absolute;
 	top: 66px;
-	left: -165px;
+	left: -153px;
 	padding: 29px 23px 26px;
 	border: 1px solid #ddd;
 	background-color: #FFF;
@@ -285,6 +288,7 @@
 .mod-header .addition-area .personal-info{
 	float: left;
 	position: relative;
+	cursor: pointer;
 }
 .mod-header .addition-area .personal-info h3{
 	height: 66px;
@@ -294,6 +298,7 @@
 	color: #FFF;
 }
 .mod-header .personal-info .personal-info-box{
+	display: none;
 	position: absolute;
 	left: -82px;
 	top: 66px;
@@ -348,4 +353,27 @@
 .mod-header .addition-area .settings-btn:link,
 .mod-header .addition-area .settings-btn:visited{
 	color: #FFF;
+}
+.mod-header .search-area{
+	margin-right: 15px;
+}
+.mod-header .search-area .input-box{
+	width: 205px;
+	height: 16px;
+	padding-left: 12px;
+	border-radius: 13px 0 0 13px;
+	border-color: #d0d0d0;
+	font-size: 15px;
+}
+.mod-header .search-area .btn{
+	height: 30px;
+	width: 30px;
+	border-radius: 0 13px 13px 0;
+	border-color: #d0d0d0;
+	border-left-color: #c4c4c4;
+	background-position: 3px -445px;
+	background-color: #f5f5f5;
+}
+.mod-header .search-area .btn:hover{
+	background-position: -47px -395px;
 }

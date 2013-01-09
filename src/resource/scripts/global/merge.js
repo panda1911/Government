@@ -11,7 +11,6 @@
 	};
 })();
 
-ImportJavascript.url('../scripts/lib/beast/merge.js');
 ImportJavascript.url('../scripts/global/common.js');
 ImportJavascript.url('../scripts/global/ajax-config.js');
 ImportJavascript.url('../scripts/module/imitate-checkbox.js');
