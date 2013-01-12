@@ -131,6 +131,9 @@
 	border-bottom: 1px solid #7f7f7f;
 	text-align: center;
 }
+.layout-file-content .content{
+	overflow: hidden;
+}
 .layout{
 	width: 100%;
 	min-width: 1280px;
@@ -139,21 +142,21 @@
 }
 .layout .layout-toolbar{
 	width: 84px;
-	height: 720px;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 .layout .layout-file-list{
 	width: 450px;
-	height: 720px;
+	height: 100%;
 	position: absolute;
 
 	top: 0;
 	left: 84px;
 }
 .layout .layout-file-content{
-	height: 720px;
+	height: 100%;
 	margin-left: 534px;
 }
 .layout-file-list header .operate-area{
