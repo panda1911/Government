@@ -7,15 +7,9 @@
 	background: url("../../images/icon-bg-new.png") 0 0 no-repeat;
 }
 .detail-info{
-	position: relative;
-	padding-top: 32px;
-	padding-bottom: 72px;
+	overflow-y: auto;
 }
 .detail-info .cell-header{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
 	height: 32px;
 	line-height: 32px;
 	background-color: #eaeaea;
@@ -42,17 +36,13 @@
 }
 .detail-info .cell-content{
 	height: 100%;
-	overflow-y: auto;
+	
 }
 .detail-info .cell-footer{
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	height: 71px;
-	width: 100%;
-	border-top: 1px solid #ddd;
+	height: 52px;
 	background-color: #f7f7f7;
-	line-height: 71px;
+	margin: 8px;
+	line-height: 52px;
 	text-align: right;
 }
 .detail-info .cell-footer .reset-btn{
@@ -84,7 +74,7 @@
 	color: #666;
 }
 .cell-membership-detail .cell-content{
-	height: 688px;
+	
 }
 .membership-credentials-box{
 	width: 416px;
@@ -134,18 +124,16 @@
 .cell-membership-detail .no-membership-info{
 	background: url("../../images/no-membership-info-bg.png") 50% 50% no-repeat;
 }
-.batch-processing-box dl{
-	margin-left: 20px;
-}
-.batch-processing-box dt{
-	height: 40px;
-	line-height: 40px;
-	color: #666;
-}
 .batch-processing-box dd{
 	position: relative;
 	padding-right: 133px;
 
+}
+.batch-processing-box .select-area{
+	margin-top: 16px;
+	position: relative;
+	padding-left: 130px;
+	padding-right: 40px;
 }
 .item-container{
 	border: 1px solid #ccc;
@@ -179,6 +167,11 @@
 	position: absolute;
 	top: 0;
 	right: 35px;
+}
+.batch-processing-box .select-area .btn{
+	position: absolute;
+	top: 40px;
+	left: 20px;
 }
 .organization-tree{
 	height: 100%;
@@ -268,4 +261,7 @@
 }
 .batch-processing-box .item-container .item{
 	margin-right: 0;
+}
+.batch-processing-box .form-list .label-describe{
+	width: 113px;
 }

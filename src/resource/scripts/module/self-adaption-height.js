@@ -19,9 +19,6 @@
 	fileListContent = $('.layout-file-list>.content').first(),
 	fileContentHeader = $('.layout-file-content>header').first(),
 	fileContentContent = $('.layout-file-content>.content').first(),
-	detailInfoHeader = $('.detail-info>.cell-header').first(),
-	detailInfoContent = $('.detail-info>.cell-content').first(),
-	detailInfoFooter = $('.detail-info>.cell-footer').first(),
 	throttle = function(method, context) {
     	clearTimeout(method.tId);
     	method.tId = setTimeout(function(){
@@ -43,21 +40,19 @@
 		adjustAreaHeight(toolBarHeader,toolBarContent,toolBarFooter);
 		adjustAreaHeight(fileListHeader,fileListContent,null);
 		fileContentHeight = adjustAreaHeight(fileContentHeader,fileContentContent,null);
-		adjustDetailInfo(detailInfoHeader, detailInfoContent, detailInfoFooter);
+		//adjustDetailInfo(detailInfoHeader, detailInfoContent, detailInfoFooter);
 	},
 	adjustAreaHeight = function(header, content, footer){
 		var headerHeight = header?header.height():0,
 		footerHeight = footer?footer.height():0,
-		contentHeight = pageContentHeight-headerHeight-footerHeight;
-
+		contentHeight = pageContentHeight-headerHeight-footerHeight-1,
+		event;
 		content.height(contentHeight);
-		return contentHeight;
-	},
-	adjustDetailInfo = function(header, content, footer){
-		var headerHeight = header?header.height():0,
-		footerHeight = footer?footer.height():0,
-		contentHeight = fileContentHeight-headerHeight-footerHeight;
-		content.height(contentHeight);
+		event = $.Event('adjust.selfAdaptionHeight');
+		event.custom = {
+			height : contentHeight
+		};
+		content.trigger(event);
 		return contentHeight;
 	},
 	init = function(){

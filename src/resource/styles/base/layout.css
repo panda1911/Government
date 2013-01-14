@@ -132,7 +132,7 @@
 	text-align: center;
 }
 .layout-file-content .content{
-	overflow: hidden;
+	overflow-y: auto;
 }
 .layout{
 	width: 100%;

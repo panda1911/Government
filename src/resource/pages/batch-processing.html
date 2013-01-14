@@ -84,20 +84,16 @@
                             </div>
                             <div class="cell-content">
                                 <div class="batch-processing-box">
-                                    <dl>
-                                        <dt>组织范围：</dt>
-                                        <dd>
-                                            <div id="selectedOrganizationContainer" class="item-container clear-float">
+                                    <div class="select-area">
+                                        <button class="btn btn-large organization-manager-btn" type="button">添加组织</button>
+                                        <div id="selectedOrganizationContainer" class="item-container clear-float">
                                             </div>
-                                            <button class="btn btn-large organization-manager-btn" type="button">添加组织</button>
-                                        </dd>
-                                        <dt>用户范围：</dt>
-                                        <dd>
-                                            <div id="selectedMemberContainer" class="item-container clear-float">
+                                    </div>
+                                    <div class="select-area">
+                                        <button class="btn btn-large member-manager-btn" type="button">添加用户</button>
+                                        <div id="selectedMemberContainer" class="item-container clear-float">
                                             </div>
-                                            <button class="btn btn-large member-manager-btn" type="button">添加用户</button>
-                                        </dd>
-                                    </dl>
+                                    </div>
                                     <ul class="form-list">
                                         <li>
                                             <label class="label-describe">密码：</label>
@@ -115,8 +111,8 @@
                                 <input type="hidden" id="selectedOrganizations"/>
                                 <!-- 选中的用户ID都存在这里 -->
                                 <input type="hidden" id="selectedMembers"/>
-                                <button class="btn" type="submit">保存</button>
-                                <button class="btn reset-btn" type="button">重置</button>
+                                <button class="btn btn-large" type="submit">保存</button>
+                                <button class="btn btn-large reset-btn" type="button">重置</button>
                             </div>
                         </div>
                         </form>

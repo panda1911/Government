@@ -183,5 +183,12 @@ jQuery(function($){
 				manageNoInfoTip();
 			}
 		});
+
+		memberInfoContainer.height(memberInfoContainer.parents('.content').first().height()-32);
+		$('.layout-file-content>.content').first().on('adjust.selfAdaptionHeight',function(e){
+			var el = $(this),
+			contentHeight = e.custom.height;
+			memberInfoContainer.height(contentHeight-32);
+		});
 	}();
 });
