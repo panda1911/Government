@@ -16,7 +16,34 @@ jQuery(function($){
 	customBtn = $('#customBtn'),
 	customAuthorityDialog = $('#customAuthorityDialog'),
 	deleteOrganizationBtn = $('#deleteOrganizationBtn'),
+	upBtn = $('#upBtn'),
+	downBtn = $('#downBtn'),
 	organizationTree,
+	//管理上移、下移按钮
+	manageUpAndDown = function(node){
+		var id = node.attr('id'),
+		customAttr = 'data-current-node-id';
+		if(organizationTree.isOnlyChild(node)){
+			C.forbiddenBtn(upBtn);
+			C.forbiddenBtn(downBtn);
+		}
+		else if(organizationTree.isLastChild(node)){
+			C.activateBtn(upBtn);
+			upBtn.attr(customAttr,id);
+			C.forbiddenBtn(downBtn);
+		}
+		else if(organizationTree.isFirstChild(node)){
+			C.forbiddenBtn(upBtn);
+			C.activateBtn(downBtn);
+			downBtn.attr(customAttr,id);
+		}
+		else{
+			C.activateBtn(upBtn);
+			upBtn.attr(customAttr,id);
+			C.activateBtn(downBtn);
+			downBtn.attr(customAttr,id);
+		}
+	},
 	getOrganizationDetail = function(e){
 		e.preventDefault();
 		var that = this,
@@ -39,6 +66,7 @@ jQuery(function($){
 				showOrganizationDetail(data);
 			}
 		});
+		manageUpAndDown(node);
 	},
 	showOrganizationDetail = function(o){
 		organizationId.val(o['id'] || '');
@@ -111,6 +139,12 @@ jQuery(function($){
 					removeOrganizations(ids);
 				}
 			}
+		});
+		upBtn.on('click',function(){
+
+		});
+		downBtn.on('click',function(){
+			
 		});
 	}();
 });

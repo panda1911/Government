@@ -70,6 +70,10 @@
 			brothers = that.getBrothers(node);
 			return brothers.length === 1;
 		},
+		isFirstChild = function(node){
+			var that = this;
+			return that.getPreNode(node)?true:false;
+		},
 		//是否为最后一个子节点
 		isLastChild : function(node){
 			var that = this;

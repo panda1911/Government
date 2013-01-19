@@ -21,5 +21,3 @@ ImportJavascript.url('../scripts/module/tree.js');
 ImportJavascript.url('../scripts/module/tree-dynamic.js');
 ImportJavascript.url('../scripts/module/tree-selectable-with-dynamic.js');
 ImportJavascript.url('../scripts/module/tree-selectable-with-single.js');
-ImportJavascript.url('../scripts/module/member-manager.js');
-ImportJavascript.url('../scripts/module/organization-manager.js');

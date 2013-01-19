@@ -10,6 +10,7 @@ jQuery(function($){
 	selectedOrganization = $('#selectedOrganization'),
 	organizationBox = $('#organizationBox'),
 	memberInfoContainer = $('#memberInfoContainer'),
+	allSelectBtn = $('#allSelectBtn'),
 	body = $(document.body),
 	organizationTree,
 	memberInfoCache = {},
@@ -129,6 +130,23 @@ jQuery(function($){
 		memberInfoCache['info'+id] = true;
 		manageNoInfoTip();
 	},
+	showMemberDetail = function(isChecked,memberId,key){
+		if(isChecked){
+			if(memberInfoCache[key]){
+				memberInfoContainer.find('[data-member-id="'+memberId+'"]').show();
+				memberInfoCache[key] = true;
+				manageNoInfoTip();
+			}
+			else{
+				getMemberDetail(memberId);
+			}
+		}
+		else{
+			memberInfoContainer.find('[data-member-id="'+memberId+'"]').hide();
+			memberInfoCache[key] = false;
+			manageNoInfoTip();
+		}
+	},
 	manageNoInfoTip = function(){
 		var ret = false;
 		for(var i in memberInfoCache){
@@ -142,6 +160,21 @@ jQuery(function($){
 		}
 		else{
 			memberInfoContainer.addClass('no-membership-info');
+		}
+	},
+	selectAllMembers = function(){
+		var checkboxs = memberBox.find('input[type="checkbox"]'),
+		checkbox,
+		isChecked,
+		memberId;
+		for(var i=0,l=checkboxs.length;i<l;i++){
+			checkbox = $(checkboxs[i]);
+			isChecked = checkbox.prop('checked');
+			if(!isChecked){
+				memberId = checkbox.attr('data-member-id');
+				checkbox.prop('checked',true);
+				showMemberDetail(true,memberId,'info'+memberId);
+			}
 		}
 	},
 	init = function(){
@@ -167,22 +200,9 @@ jQuery(function($){
 			memberId = el.attr('data-member-id'),
 			isChecked = el.prop('checked'),
 			key = 'info'+memberId;
-			if(isChecked){
-				if(memberInfoCache[key]){
-					memberInfoContainer.find('[data-member-id="'+memberId+'"]').show();
-					memberInfoCache[key] = true;
-					manageNoInfoTip();
-				}
-				else{
-					getMemberDetail(memberId);
-				}
-			}
-			else{
-				memberInfoContainer.find('[data-member-id="'+memberId+'"]').hide();
-				memberInfoCache[key] = false;
-				manageNoInfoTip();
-			}
+			showMemberDetail(isChecked,memberId,key);
 		});
+<<<<<<< HEAD
 
 		memberInfoContainer.height(memberInfoContainer.parents('.content').first().height()-32);
 		$('.layout-file-content>.content').first().on('adjust.selfAdaptionHeight',function(e){
@@ -190,5 +210,8 @@ jQuery(function($){
 			contentHeight = e.custom.height;
 			memberInfoContainer.height(contentHeight-32);
 		});
+=======
+		allSelectBtn.on('click',selectAllMembers);
+>>>>>>> 部分功能完善
 	}();
 });
