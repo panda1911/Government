@@ -202,16 +202,12 @@ jQuery(function($){
 			key = 'info'+memberId;
 			showMemberDetail(isChecked,memberId,key);
 		});
-<<<<<<< HEAD
-
 		memberInfoContainer.height(memberInfoContainer.parents('.content').first().height()-32);
 		$('.layout-file-content>.content').first().on('adjust.selfAdaptionHeight',function(e){
 			var el = $(this),
 			contentHeight = e.custom.height;
 			memberInfoContainer.height(contentHeight-32);
 		});
-=======
 		allSelectBtn.on('click',selectAllMembers);
->>>>>>> 部分功能完善
 	}();
 });
