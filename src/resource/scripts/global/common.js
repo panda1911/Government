@@ -25,10 +25,10 @@
  	$.namespace('G.common');
  	G.common = {
         forbiddenBtn : function(btn){
-            btn.prop('disabled',true);
+            btn.attr('disabled',true);
         },
         activateBtn : function(btn){
-            btn.prop('disabled',false);
+            btn.attr('disabled',false);
         },
         init : function(){
             var body = $(document.body);

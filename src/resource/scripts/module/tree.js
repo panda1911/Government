@@ -242,6 +242,46 @@
 			var that = this;
 			return node.prev();
 		},
+		getNextNode : function(node){
+			var that = this;
+			return node.next();
+		},
+		//是否为唯一子节点
+		isOnlyChild : function(node){
+			var that = this,
+			brothers = that.getBrothers(node);
+			return brothers.length === 1;
+		},
+		//是否为第一个子节点
+		isFirstChild : function(node){
+			var that = this;
+			return that.getPreNode(node)?true:false;
+		},
+		//是否为最后一个子节点
+		isLastChild : function(node){
+			var that = this;
+			return node.hasClass(that.options.lastNodeClassName);
+		},
+		//节点上移
+		shiftUp : function(node){
+			var that = this,
+			prev = that.getPreNode(node);
+			node.insertBefore(prev);
+			if(that.isLastChild(node)){
+				node.removeClass(that.options.lastNodeClassName);
+				prev.addClass(that.options.lastNodeClassName);
+			}
+		},
+		//节点下移
+		shiftDown : function(node){
+			var that = this,
+			next = that.getNextNode(node);
+			node.insertAfter(next);
+			if(that.isLastChild(next)){
+				next.removeClass(that.options.lastNodeClassName);
+				node.addClass(that.options.lastNodeClassName);
+			}
+		},
 		chunkLoop : function(a,fn){
 			var that = this;
 			setTimeout(function(){

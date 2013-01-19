@@ -44,6 +44,31 @@ jQuery(function($){
 			downBtn.attr(customAttr,id);
 		}
 	},
+	//移动组织节点
+	moveNode = function(id,isUp){
+		var config = G.ajaxConfig['moveOrganization'],
+		url = config.url,
+		param = config.param,
+		node;
+		param['organizationId'] = id;
+		param['direction'] = isUp?-1:1;
+		$.ajax({
+			url : url,
+			data : param,
+			dataType : 'json'
+		}).done(function(o){
+			if(o && o.isSuccess){
+				node = organizationTree.getNodeById(id);
+				if(isUp){
+					organizationTree.shiftUp(node);
+				}
+				else{
+					organizationTree.shiftDown(node);
+				}
+				manageUpAndDown(node);
+			}
+		});
+	},
 	getOrganizationDetail = function(e){
 		e.preventDefault();
 		var that = this,
@@ -140,11 +165,25 @@ jQuery(function($){
 				}
 			}
 		});
-		upBtn.on('click',function(){
-
+		upBtn.on('click',function(e){
+			e.preventDefault();
+			var el = $(this),
+			currentNodeId = el.attr('data-current-node-id'),
+			isDisabled = el.attr('disabled');
+			if(isDisabled){
+				return;
+			}
+			moveNode(currentNodeId,true);
 		});
-		downBtn.on('click',function(){
-			
+		downBtn.on('click',function(e){
+			e.preventDefault();
+			var el = $(this),
+			currentNodeId = el.attr('data-current-node-id'),
+			isDisabled = el.attr('disabled');
+			if(isDisabled){
+				return;
+			}
+			moveNode(currentNodeId,false);
 		});
 	}();
 });

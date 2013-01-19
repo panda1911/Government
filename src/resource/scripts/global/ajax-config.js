@@ -31,6 +31,13 @@
 			param : {
 				organizationIds : null
 			}
+		},
+		moveOrganization : {
+			url : 'json/organization-move.json',
+			param : {
+				organizationId : null,
+				direction : null
+			}
 		}
 	};
 })(jQuery);
