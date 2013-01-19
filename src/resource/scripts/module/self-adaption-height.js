@@ -7,7 +7,7 @@
 	var doc = document,
 	container = $('#content'),
 	//最小高度
-	minHeight = 500,
+	minHeight = 550,
 	theViewportHeight = 0,
 	pageHeaderHeight = 0,
 	pageContentHeight = 0,
