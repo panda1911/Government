@@ -47,6 +47,18 @@
 .down-btn{
 	background-position: 0 -1000px;
 }
+.up-btn[disabled],
+.up-btn[disabled="disabled"],
+.up-btn[disabled]:hover{
+	background-position: -100px -950px;
+	cursor: not-allowed;
+}
+.down-btn[disabled],
+.down-btn[disabled="disabled"],
+.down-btn[disabled]:hover{
+	background-position: -100px -1000px;
+	cursor: not-allowed;
+}
 .export-btn{
 	background-position: 0 -1046px;
 }

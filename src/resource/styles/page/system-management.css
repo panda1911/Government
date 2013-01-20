@@ -49,9 +49,6 @@
 	margin-left: 9px;
 	margin-right: 20px;
 }
-.cell-membership-detail .form-list{
-	border-bottom: 1px solid #eaeaea;
-}
 .cell-membership-detail .member-info{
 	margin: 0 10px;
 	border-bottom: 1px solid #eaeaea;
@@ -123,6 +120,14 @@
 }
 .cell-membership-detail .no-membership-info{
 	background: url("../../images/no-membership-info-bg.png") 50% 50% no-repeat;
+}
+.cell-membership-detail .operate-area{
+	height: 52px;
+	background-color: #f7f7f7;
+	margin: 8px;
+	padding-right: 20px;
+	line-height: 52px;
+	text-align: right;
 }
 .batch-processing-box dd{
 	position: relative;

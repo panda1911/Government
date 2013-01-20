@@ -11,9 +11,40 @@ jQuery(function($){
 	organizationBox = $('#organizationBox'),
 	memberInfoContainer = $('#memberInfoContainer'),
 	allSelectBtn = $('#allSelectBtn'),
+	addBtn = $('#addBtn'),
 	body = $(document.body),
 	organizationTree,
-	memberInfoCache = {},
+	editableMemberInfo = null,
+	isOpenAdd = false,
+	editableMemberDetailTemplate = '<form action="#" method="post">\
+	<input type="hidden" value="<%=$data.id%>"/>\
+	<ul class="editable-member-info form-list">\
+	<li>\
+	<label class="label-describe">用户名：</label>\
+	<input type="text" class="input-box" value="<%=$data.userName%>"/>\
+	</li>\
+	<li>\
+	<label class="label-describe">真实姓名：</label>\
+	<input type="text" class="input-box" value="<%=$data.trueName%>"/>\
+	</li>\
+	<li>\
+	<label class="label-describe">所在部门：</label>\
+	<input type="text" class="input-box" value="<%=$data.department%>"/>\
+	</li>\
+	<li>\
+	<label class="label-describe">单位权限：</label>\
+	<input type="text" class="input-box" value="<%=$data.authority%>"/>\
+	</li>\
+	<li>\
+	<label class="label-describe">密码：</label>\
+	<input type="text" class="input-box" value="<%=$data.password%>"/>\
+	</li>\
+	</ul>\
+	<div class="operate-area">\
+	<button class="btn btn-large" type="submit">保存</button>\
+	<button class="btn btn-large reset-btn" type="reset">重置</button>\
+	</div>\
+	</form>',
 	showMembers = function(e){
 		e.preventDefault();
 		var that = this,
@@ -26,6 +57,9 @@ jQuery(function($){
 		selectedOrganization.attr('data-organization-id',id);
 		selectedOrganization.val(name);
 		organizationBox.hide();
+		//清空会员详情区域
+		clearAllMemberDetails();
+		manageNoInfoTip();
 	},
 	buildOrganizationTree = function(){
 		var config = G.ajaxConfig['organizationTree'],
@@ -79,7 +113,7 @@ jQuery(function($){
 		}
 		memberBox.html(s);
 	},
-	getMemberDetail = function(id){
+	getMemberDetail = function(id,isEditable){
 		var config = G.ajaxConfig['memberDetail'],
 		url = config.url,
 		param = config.param;
@@ -92,7 +126,13 @@ jQuery(function($){
 			var data;
 			if(o && o.isSuccess){
 				data = o.data;
-				buildMemberDetail(data);
+				if(isEditable){
+					buildEditableMemberDetail(data);
+					editableMemberInfo = data;
+				}
+				else{
+					buildMemberDetail(data);
+				}
 			}
 		});
 	},
@@ -127,35 +167,61 @@ jQuery(function($){
 		ret += '</li>';
 		ret += '</ul>';
 		memberInfoContainer.append(ret);
-		memberInfoCache['info'+id] = true;
 		manageNoInfoTip();
+	},
+	buildEditableMemberDetail = function(o){
+		$.use('web-sweet', function(){
+			var html = FE.util.sweet(editableMemberDetailTemplate).applyData(o);
+    		memberInfoContainer.html(html);
+    		manageNoInfoTip();
+		});
+	},
+	clearAllMemberDetails = function(){
+		var details = memberInfoContainer.find('[data-member-id]'),
+		detail,
+		memberId,
+		key;
+		for(var i=0,l=details.length;i<l;i++){
+			detail = details.eq(i);
+			memberId = detail.attr('data-member-id');
+			key = 'info'+memberId;
+			detail.remove();
+		}
+		editableMemberInfo = null;
+		isOpenAdd = false;
 	},
 	showMemberDetail = function(isChecked,memberId,key){
 		if(isChecked){
-			if(memberInfoCache[key]){
-				memberInfoContainer.find('[data-member-id="'+memberId+'"]').show();
-				memberInfoCache[key] = true;
-				manageNoInfoTip();
+			if(memberInfoContainer.children().length === 0){
+				getMemberDetail(memberId, true);
+				return;
 			}
-			else{
-				getMemberDetail(memberId);
+			else if(editableMemberInfo){
+				memberInfoContainer.html('');
+				buildMemberDetail(editableMemberInfo);
+				editableMemberInfo = null;
 			}
+			else if(isOpenAdd){
+				isOpenAdd = false;
+				getMemberDetail(memberId, true);
+				return;
+			}
+
+			getMemberDetail(memberId);
 		}
 		else{
-			memberInfoContainer.find('[data-member-id="'+memberId+'"]').hide();
-			memberInfoCache[key] = false;
+			if(memberInfoContainer.children().length===2){
+				memberInfoContainer.find('[data-member-id="'+memberId+'"]').remove();
+				getMemberDetail(memberInfoContainer.children().first().attr('data-member-id'), true);
+			}
+			else if(memberInfoContainer.children().length===1){
+				memberInfoContainer.html('');
+			}
 			manageNoInfoTip();
 		}
 	},
 	manageNoInfoTip = function(){
-		var ret = false;
-		for(var i in memberInfoCache){
-			if(memberInfoCache[i] === true){
-				ret = true;
-				break;
-			}
-		}
-		if(ret){
+		if(memberInfoContainer.children().length !== 0){
 			memberInfoContainer.removeClass('no-membership-info');
 		}
 		else{
@@ -174,6 +240,18 @@ jQuery(function($){
 				memberId = checkbox.attr('data-member-id');
 				checkbox.prop('checked',true);
 				showMemberDetail(true,memberId,'info'+memberId);
+			}
+		}
+	},
+	clearAllMembers = function(){
+		var checkboxs = memberBox.find('input[type="checkbox"]'),
+		checkbox,
+		isChecked;
+		for(var i=0,l=checkboxs.length;i<l;i++){
+			checkbox = checkboxs.eq(i);
+			isChecked = checkbox.prop('checked');
+			if(isChecked){
+				checkbox.prop('checked',false);
 			}
 		}
 	},
@@ -208,6 +286,21 @@ jQuery(function($){
 			contentHeight = e.custom.height;
 			memberInfoContainer.height(contentHeight-32);
 		});
-		allSelectBtn.on('click',selectAllMembers);
+		allSelectBtn.on('click',function(e){
+			selectAllMembers(true);
+		});
+		addBtn.on('click',function(){
+			clearAllMembers();
+			clearAllMemberDetails();
+			buildEditableMemberDetail({
+				id : '',
+				userName : '',
+				trueName : '',
+				department : '',
+				authority : '',
+				password : ''
+			});
+			isOpenAdd = true;
+		});
 	}();
 });

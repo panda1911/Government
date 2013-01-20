@@ -113,7 +113,7 @@ jQuery(function($){
 			var data;
 			if(o && o.isSuccess){
 				data = o.data;
-				organizationTree = new Energon.ui.selectableWithSingleTree({
+				organizationTree = new Energon.ui.selectableWithDynamicTree({
 					container : organizationTreeContainer,
 					content : data,
 					clickEvent : getOrganizationDetail
