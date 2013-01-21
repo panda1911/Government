@@ -177,20 +177,11 @@ jQuery(function($){
 		});
 	},
 	clearAllMemberDetails = function(){
-		var details = memberInfoContainer.find('[data-member-id]'),
-		detail,
-		memberId,
-		key;
-		for(var i=0,l=details.length;i<l;i++){
-			detail = details.eq(i);
-			memberId = detail.attr('data-member-id');
-			key = 'info'+memberId;
-			detail.remove();
-		}
+		memberInfoContainer.html('');
 		editableMemberInfo = null;
 		isOpenAdd = false;
 	},
-	showMemberDetail = function(isChecked,memberId,key){
+	showMemberDetail = function(isChecked,memberId){
 		if(isChecked){
 			if(memberInfoContainer.children().length === 0){
 				getMemberDetail(memberId, true);
@@ -217,6 +208,9 @@ jQuery(function($){
 			else if(memberInfoContainer.children().length===1){
 				memberInfoContainer.html('');
 			}
+			else{
+				memberInfoContainer.find('[data-member-id="'+memberId+'"]').remove();
+			}
 			manageNoInfoTip();
 		}
 	},
@@ -232,14 +226,22 @@ jQuery(function($){
 		var checkboxs = memberBox.find('input[type="checkbox"]'),
 		checkbox,
 		isChecked,
-		memberId;
-		for(var i=0,l=checkboxs.length;i<l;i++){
+		memberId,
+		l=checkboxs.length;
+		clearAllMembers();
+		clearAllMemberDetails();
+		if(l===1){
+			memberId = checkboxs.eq(0).attr('data-member-id');
+			getMemberDetail(memberId,true);
+			return;
+		}
+		for(var i=0;i<l;i++){
 			checkbox = $(checkboxs[i]);
 			isChecked = checkbox.prop('checked');
 			if(!isChecked){
 				memberId = checkbox.attr('data-member-id');
 				checkbox.prop('checked',true);
-				showMemberDetail(true,memberId,'info'+memberId);
+				getMemberDetail(memberId);
 			}
 		}
 	},
@@ -278,7 +280,7 @@ jQuery(function($){
 			memberId = el.attr('data-member-id'),
 			isChecked = el.prop('checked'),
 			key = 'info'+memberId;
-			showMemberDetail(isChecked,memberId,key);
+			showMemberDetail(isChecked,memberId);
 		});
 		memberInfoContainer.height(memberInfoContainer.parents('.content').first().height()-32);
 		$('.layout-file-content>.content').first().on('adjust.selfAdaptionHeight',function(e){
@@ -287,9 +289,11 @@ jQuery(function($){
 			memberInfoContainer.height(contentHeight-32);
 		});
 		allSelectBtn.on('click',function(e){
+			e.preventDefault();
 			selectAllMembers(true);
 		});
-		addBtn.on('click',function(){
+		addBtn.on('click',function(e){
+			e.preventDefault();
 			clearAllMembers();
 			clearAllMemberDetails();
 			buildEditableMemberDetail({

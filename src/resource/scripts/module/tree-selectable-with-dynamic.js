@@ -115,11 +115,11 @@
 			ret += isChecked==='no'?'':(isChecked==='yes'?that.options.checkedClassName:that.options.halfCheckedClassName);
 			ret += '" data-node-id="'+ id +'"></em>';
 			ret += '<a title="'+ title +'" href="'+ url +'">';
-			// ret += '<i class="'+ that.options.nodeIconClassName;
-			// if(customIconClassName){
-			// 	ret += ' ' + customIconClassName;
-			// }
-			// ret += '"></i>';
+			ret += '<i class="'+ that.options.nodeIconClassName;
+			if(customIconClassName){
+				ret += ' ' + customIconClassName;
+			}
+			ret += '"></i>';
 			ret += name;
 			ret += '</a>';
 			if(comment !== ''){

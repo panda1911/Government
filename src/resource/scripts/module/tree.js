@@ -133,11 +133,11 @@
 			ret = '<div>';
 			ret += '<i class="'+ that.options.structureIconClassName +'"></i>';
 			ret += '<a title="'+ title +'" href="'+ url +'">';
-			// ret += '<i class="'+ that.options.nodeIconClassName;
-			// if(customIconClassName){
-			// 	ret += ' ' + customIconClassName;
-			// }
-			// ret += '"></i>';
+			ret += '<i class="'+ that.options.nodeIconClassName;
+			if(customIconClassName){
+			 	ret += ' ' + customIconClassName;
+			}
+			ret += '"></i>';
 			ret += name;
 			if(comment !== ''){
 				ret += '<span class="'+that.options.commentClassName+'">';
