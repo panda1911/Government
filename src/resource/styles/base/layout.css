@@ -281,6 +281,7 @@
 .mod-header .sub-list li a:link,
 .mod-header .sub-list li a:visited{
 	color: #3d3d3d;
+	text-decoration: none;
 }
 .mod-header .addition-area{
 	float: right;
