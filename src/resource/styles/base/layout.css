@@ -243,7 +243,7 @@
 	position: absolute;
 	top: 66px;
 	left: -153px;
-	padding: 29px 23px 26px;
+	padding: 10px 0 4px;
 	border: 1px solid #ddd;
 	background-color: #FFF;
 	z-index: 1;
@@ -353,6 +353,7 @@
 	background-position: 0 -827px;
 	line-height: 66px;
 	font-size: 14px;
+	text-decoration: none;
 }
 .mod-header .addition-area .settings-btn:link,
 .mod-header .addition-area .settings-btn:visited{
