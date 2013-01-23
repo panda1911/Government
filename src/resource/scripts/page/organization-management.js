@@ -18,6 +18,7 @@ jQuery(function($){
 	deleteOrganizationBtn = $('#deleteOrganizationBtn'),
 	upBtn = $('#upBtn'),
 	downBtn = $('#downBtn'),
+	uploader = $('#uploader'),
 	organizationTree,
 	//管理上移、下移按钮
 	manageUpAndDown = function(node){
@@ -184,6 +185,17 @@ jQuery(function($){
 				return;
 			}
 			moveNode(currentNodeId,false);
+		});
+		$.use('ui-tabs',function(){
+		    $('#exportBox').tabs({
+		    	isAutoPlay:false,
+		    	titleSelector : '.tab-list li',
+		    	boxSelector : '.tab-content',
+		    	event : 'click'
+		    });
+		});
+		uploader.on('click',function(){
+			
 		});
 	}();
 });

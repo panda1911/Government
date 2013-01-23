@@ -80,6 +80,37 @@
                             <a id="deleteOrganizationBtn" title="删除" disabled="disabled" class="icon delete-btn" href="#"></a>
                             <a id="upBtn" title="上移" disabled="disabled" class="icon up-btn" href="#"></a>
                             <a id="downBtn" title="下移" disabled="disabled" class="icon down-btn" href="#"></a>
+                            <a title="导入导出" class="icon export-btn" data-tip-content-id="exportBox" href="#"></a>
+                        </div>
+                        <div id="exportBox" class="tip-container export-box">
+                            <div class="tip-content">
+                                <div class="tip-tail"></div>
+                                <ul class="list tab-list">
+                                    <li class="current">导入文件</li>
+                                    <li>导出文件</li>
+                                </ul>
+                                <div class="tab-content">
+                                    <p>
+                                        <input id="uploader" readonly="readonly" type="text" class="input-box" placeholder="添加附件"/>
+                                        <input class="hide" type="file"/>
+                                    </p>
+                                    <div class="btn-area">
+                                        <button type="button" class="btn" title="确定">确定</button>
+                                        <button type="button" class="btn cancel-btn" title="取消">取消</button>
+                                    </div>
+                                </div>
+                                <div class="tab-content hide">
+                                    <p>
+                                        <em>选择格式：</em>
+                                        <label><input checked="checked" type="radio" name="fileType"/>TXT</label>
+                                        <label><input type="radio" name="fileType"/>XLS</label>
+                                    </p>
+                                    <div class="btn-area">
+                                        <button type="button" class="btn" title="确定">确定</button>
+                                        <button type="button" class="btn cancel-btn" title="取消">取消</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </header>
                     <div class="content">

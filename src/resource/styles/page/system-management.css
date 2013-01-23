@@ -270,3 +270,60 @@
 .batch-processing-box .form-list .label-describe{
 	width: 113px;
 }
+.export-box{
+	display: none;
+	width: 292px;
+	position: absolute;
+	left: 162px;
+	top: 31px;
+}
+.export-box .tip-content{
+	width: 292px;
+	padding: 10px;
+}
+.export-box .tab-list{
+	border-bottom: 4px solid #3a8ce8;
+	height: 26px;
+}
+.export-box .tab-list li{
+	height: 26px;
+	background-color: #afd1f7;
+	padding: 0 21px;
+	margin-right: 3px;
+	border-radius: 3px 3px 0 0;
+	line-height: 26px;
+	text-align: center;
+	font-weight: 700;
+	color: #333;
+	cursor: pointer;
+}
+.export-box .tab-list li.current{
+	background-color: #3a8ce8;
+	color: #FFF;
+}
+.export-box .tab-content .input-box{
+	width: 282px;
+}
+.export-box .tab-content p{
+	line-height: 46px;
+	height: 46px;
+}
+.export-box .tab-content .btn-area{
+	text-align: right;
+}
+.export-box .tab-content em{
+	display: inline-block;
+	width: 68px;
+	height: 46px;
+	font-style: normal;
+	color: #666;
+}
+.export-box .tab-content label{
+	display: inline-block;
+	margin-right: 20px;
+	height: 46px;
+	color: #666;
+}
+.export-box .tab-content label input[type="radio"]{
+	margin-right: 4px;
+}

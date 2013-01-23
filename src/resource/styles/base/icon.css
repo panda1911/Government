@@ -60,7 +60,7 @@
 	cursor: not-allowed;
 }
 .export-btn{
-	background-position: 0 -1046px;
+	background-position: 0 -1251px;
 }
 .layout-btn:hover{
 	background-position: -50px 0;
@@ -107,6 +107,7 @@
 .down-btn:hover{
 	background-position: -50px -1000px;
 }
-.export-btn:hover{
-	background-position: -50px -1046px;
+.export-btn:hover,
+.export-btn.tip-show{
+	background-position: -50px -1250px;
 }
